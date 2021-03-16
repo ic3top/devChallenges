@@ -1,0 +1,26 @@
+.experience {
+    max-width: 596px;
+    &__block {
+        padding: 17px 31px 40px 31px;
+    }
+    &__item {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text {
+        margin-top: 35px;
+    }
+    &__title {
+        margin-top: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+    &__logo {
+        margin-right: 23px;
+        width: 120px;
+        height: 84px;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,35 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import 'base/variables';
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1046px;
+    justify-content: space-between;
+}
+
+.mt-42 {
+    margin-top: 42px;
+}
+
+@import 'blocks/page';
+@import 'blocks/block';
+@import 'blocks/text';
+@import 'blocks/info';
+@import 'blocks/skills';
+@import 'blocks/blog';
+@import 'blocks/hobbies';
+@import 'blocks/experience';
+@import 'blocks/projects';
+@import 'blocks/btn';
+@import 'blocks/portfolio';
+@import 'blocks/footer';
+@import 'blocks/media';

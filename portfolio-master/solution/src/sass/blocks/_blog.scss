@@ -1,0 +1,38 @@
+.blog {
+    max-width: 596px;
+    &__block {
+        padding: 31px 0px 32px 20px;
+    }
+    &__upper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text {
+        max-width: 178px;
+        margin-top: 21px;
+    }
+    &__img {
+        margin-top: 16px;
+        height: 321px;
+        width: 360px;
+        img {
+            border-radius: 12px;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__down {
+        margin-top: 50px;
+        padding-right: 82px;
+    }
+    &__link {
+        display: block;
+        margin-top: 66px;
+        color: $main-color;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+}

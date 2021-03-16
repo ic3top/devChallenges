@@ -1,0 +1,13 @@
+.footer {
+    &__block {
+        width: 402px;
+    }
+    &__text {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        color: #A9A9A9;
+        margin-top: 23px;
+        text-align: center;
+    }
+}

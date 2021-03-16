@@ -1,0 +1,54 @@
+.btn {
+    border-radius: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    padding: 8px 22px; 
+    border: 1px solid #4F4F4F;
+    background-color: #ffffff;
+    transition-duration: .4s;
+    &:hover {
+        border-color: $main-color;
+        color: $main-color;
+    }
+    &_bg-blue {
+        border: 1px solid $main-color;
+        background-color: $main-color;
+        color: #FFFFFF;
+        &:hover {
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #4F4F4F;
+        }
+    }
+    &_out-blue {
+        border: 1px solid #5C94E1;
+        box-sizing: border-box;
+    }
+    &_md {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        padding: 12px 35px;
+    }
+    &_lg {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        padding: 12px 39px;
+    }
+    &_square {
+        background: unset;
+        padding: 11px 14px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;        
+        border-radius: 4px;
+        &:hover {
+            border-color: $main-color;
+            color: #ffffff;
+            background-color: $main-color;
+        }
+    }
+}
