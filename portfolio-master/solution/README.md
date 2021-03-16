@@ -1,5 +1,5 @@
 # Another portfolio template
-> Visit it on [GHpages](https://ic3top.github.io/portfolio-template/dist/)
+> Visit it on [GHpages](https://ic3top.github.io/devChallenges/portfolio-master/solution/dist/)
 
 ## General info
 It`s another portfolio template made with SCSS HTML JS and GULP as a task-manager. I haven't tried using BEM.
