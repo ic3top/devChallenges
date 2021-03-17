@@ -4,6 +4,7 @@
 ## General info
 I found this article pritty useful: [Creating a custom 404 page for your GitHub Pages site](https://docs.github.com/en/github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)  
 You can find same FIGMA template [here.](https://www.figma.com/file/QeKWLNhB13zDjJzqR22TKE/404-page-challenge)
+DevChallenges page of this project [here.](https://devchallenges.io/solutions/Pf6FWOxsp2RoJzJckcQX)
 
 
 ## Overview
