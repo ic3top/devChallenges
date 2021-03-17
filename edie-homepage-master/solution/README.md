@@ -1,5 +1,5 @@
 # Another portfolio template
-> Visit it on [GHpages](https://ic3top.github.io/devChallenges/portfolio-master/solution/dist/)
+> Visit it on [GHpages](https://ic3top.github.io/devChallenges/edie-homepage-master/solution/dist/)
 
 ## General info
 It's an ordinary landing page made within 6 hours, I used HTML, SCSS, a little JS and GULP as a task manager. I haven't tried using BEM.  
