@@ -1,0 +1,47 @@
+.header {
+    margin-top: 42px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__links {
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link {
+        color: $text-color;
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration-line: none;
+    }
+    &__hamburger {
+        display: none;
+        height: 21px;
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        cursor: pointer;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        transition: all .3s;
+        span {
+            transition: all .3s;
+            background: #151812;
+            width: 26px;
+            height: 3px;
+            &:nth-child(2) {
+                width: 36px;
+            }
+        }
+        &:hover {
+            height: 26px;
+            span {
+                height: 4px;
+                width: 36px;
+            }
+        }
+    }
+}

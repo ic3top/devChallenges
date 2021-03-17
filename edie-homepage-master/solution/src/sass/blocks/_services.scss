@@ -1,0 +1,65 @@
+.services {
+    margin-top: 200px;
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+    }
+    &__wrapper {
+        margin-top: 42px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        width: 340px;
+        padding: 46px 34px;
+        border-radius: 24px;   
+        transition: all .4s; 
+        &-title {
+           margin-top: 35px;
+           font-weight: 700;
+           font-size: 24px; 
+           color: $text-color;
+        }
+        &:hover {
+            box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+            transform: scale(1.05);
+            .services__button {
+                background: #2D9CDB;
+                color: #FFFFFF;
+            }
+        }
+    }
+    &__descr {
+        font-size: 16px;
+        color: $text-sub-color;
+        margin-top: 24px;
+    }
+    &__img {
+        border-radius: 16px;
+        width: 67px;
+        height: 67px; 
+        display: flex;
+        svg {
+            margin: auto;
+        }
+        &_blue {
+            background: #2D9CDB;
+        }
+        &_green {
+            background: #27AE60;
+        }
+        &_red {
+            background: #EB5757;
+        }
+    }
+    &__button {
+        margin-top: 30px;
+        background: #E0E0E0;
+        padding: 13px 9px;
+        border: 1px solid #E0E0E0;
+        border-radius: 12px;
+        transition: all .3s;
+        color: #828282;
+        font-size: 16px;
+    }
+}

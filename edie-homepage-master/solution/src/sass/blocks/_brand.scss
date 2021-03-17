@@ -1,0 +1,16 @@
+.brand {
+    font-weight: 800;
+    font-family: 'Heebo', sans-serif;
+    font-size: 36px;
+    color: $text-color;
+    text-decoration-line: none;
+    &:hover {
+        color: $text-color;
+    }
+    &_white {
+        color: #FFFFFF;
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+}

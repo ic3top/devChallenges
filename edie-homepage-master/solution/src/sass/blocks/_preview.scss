@@ -1,0 +1,36 @@
+.preview {
+    margin-top: 96px;
+    &__upper {
+        width: 543px;
+        margin-left: 225px;
+    }
+    &__question {
+        font-size: 16px;
+        color: $primary-color;
+        font-weight: 500;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 500;
+        color: $text-color;
+        margin-top: 16px;
+    }
+    &__img {
+        margin: 42px 0;
+        border-radius: 18px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    &__down {
+        width: 370px;
+        margin-left: 225px;
+    }
+    &__descr {
+        margin-top: 42px;
+        font-size: 18px;
+        color: $text-sub-color;
+    }
+    &__form {
+        margin-top: 42px;
+    }
+}

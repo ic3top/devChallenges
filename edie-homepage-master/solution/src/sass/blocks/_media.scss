@@ -1,0 +1,139 @@
+@media (max-width: 1200px) {
+    .works {
+        &__card {
+            &_mt-190, &_mt-155, &_mt-115 {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        margin-top: 10px;
+        &__links {
+            display: none;
+        }
+        &__hamburger {
+            display: flex;
+        }
+    }
+    .preview {
+        &__upper, &__down {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        &__link {
+            &:hover:before {
+                background-color: inherit;
+            }
+        }
+    }
+    .preview {
+        &__title {
+            font-size: 48px;
+        }
+    }
+    .services {
+        margin-top: 100px;
+        &__title {
+            padding-left: 50px;
+        }
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0;
+        }
+        &__card {
+            margin-top: 50px;
+            &:first-child {
+                margin-top: 20px;
+            }
+            &:hover {
+                box-shadow: none;
+                transform: none;
+                .services__button {
+                    background: #e0e0e0;
+                    color: $text-sub-color;
+                }
+            }
+        }
+    }
+    .works {
+        margin-top: 100px;
+        &__link {
+            font-size: 18px;
+            text-align: left;
+        }
+    }
+    .team {
+        margin-top: 100px;
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__images {
+            margin-top: 40px;
+        }
+    }
+    .conclusion {
+        margin-top: 100px;
+        &__text {
+            font-size: 24px;
+        }
+    }
+    .footer {
+        margin-top: 100px;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__main {
+            margin-top: 65px;
+        }
+        &__form {
+            margin-top: 65px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .preview {
+        &__upper {
+            max-width: 90%;
+        }
+        &__down {
+            max-width: 90%;
+        }
+        &__title {
+            font-size: 24px;
+        }
+    }
+    .services {
+        &__title {
+            font-size: 24px;
+        }
+    }
+    .works {
+        &__title {
+            font-size: 24px;
+            padding-left: 5%;
+        }
+        &__card-title {
+            font-size: 18px;
+        }
+    }
+    .form {
+        &__group {
+            display: flex;
+        }
+        input {
+            min-width: 100%;
+        }
+        button {
+            margin-left: -90px;
+        }
+    }
+}

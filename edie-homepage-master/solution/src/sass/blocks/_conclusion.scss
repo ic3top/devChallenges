@@ -1,0 +1,29 @@
+.conclusion {
+    margin-top: 200px;
+    &__text {
+        font-size: 36px;
+        font-weight: 500;
+        color: $text-color;
+        display: block;
+        max-width: 940px;
+    }
+    &__profile {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 45px;
+    }
+    &__img {
+        width: 82px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    &__title {
+        color: $text-color;
+    }
+    &__sub {
+        font-size: 18px;
+        color: $text-sub-color;
+        margin-top: 12px;
+    }
+}

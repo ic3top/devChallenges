@@ -1,0 +1,30 @@
+.form {
+    label {
+        color: #828282;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .label_white {
+        color: #FFFFFF;
+    }
+    &__group {
+        margin-top: 10px;
+    }
+    input {
+        background: #F2F2F2;
+        border-style: solid;
+        border-radius: 12px;
+        border-color: #F2F2F2;
+        padding: 15px 21px;
+        min-width: 350px;
+    }
+    button {
+        background: $primary-color;
+        border-color: $primary-color;
+        border-radius: 12px;
+        border-style: solid;
+        padding: 11px 27px;
+        color: #FFF;
+        margin-left: -100px;
+    }
+}

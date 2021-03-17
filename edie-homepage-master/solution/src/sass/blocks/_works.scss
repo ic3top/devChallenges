@@ -1,0 +1,47 @@
+.works {
+    margin-top: 200px;
+    &__title {
+        font-size: 36px;
+        color: $text-color;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    &__card {
+        &_mt-115 {
+            margin-top: 115px;
+        }
+        &_mt-155 {
+            margin-top: 155px;
+        }
+        &_mt-190 {
+            margin-top: 190px;
+        }
+    }
+    &__card-title {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    &__img {
+        border-radius: 12px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    &__sub {
+        margin-top: 20px;
+        color: #828282;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    &__link {
+        margin-top: 75px;
+        color: $primary-color;
+        text-decoration-line: none;
+        font-size: 24px;
+        font-weight: 500;
+        display: block;
+        text-align: right;
+    }
+}
