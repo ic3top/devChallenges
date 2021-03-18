@@ -9,7 +9,7 @@ DevChallenges page of this project [here.](https://devchallenges.io/solutions/Pf
 
 
 ## Overview
-![demo of the web-page](./screenshots/demo.jpg)
+![demo of the web-page](./screenshots/demo.png)
 
 
 ## Status
