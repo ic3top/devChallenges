@@ -5,7 +5,7 @@
 ## General info
 I was mastering position sticky in this task. BTW I used Bootstrap-grid and reboot (v5.0.0-beta2)    
 You can find same FIGMA template [here.](https://www.figma.com/file/2jVBTSKeCYF0dIN6fi0stX/recipe-blog-challenge?node-id=1%3A100)  
-DevChallenges page of this project [here.](https://devchallenges.io/solutions/Pf6FWOxsp2RoJzJckcQX)
+DevChallenges page of this project [here.](https://devchallenges.io/solutions/rcHmGe9iNbbT0h96LzJF)
 
 
 ## Overview
