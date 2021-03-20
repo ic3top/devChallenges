@@ -1,4 +1,4 @@
-# Another portfolio template
+# Team-page
 > Visit it on [GHpages](https://ic3top.github.io/devChallenges/my-team-page-master/solution/src/)
 
 

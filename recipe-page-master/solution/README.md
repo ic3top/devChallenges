@@ -1,4 +1,4 @@
-# Another portfolio template
+# Recipe page
 > Visit it on [GHpages](https://ic3top.github.io/devChallenges/recipe-page-master/solution/src/)
 
 

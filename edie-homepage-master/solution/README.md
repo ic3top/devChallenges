@@ -1,4 +1,4 @@
-# Another portfolio template
+# Edie landing-page
 > Visit it on [GHpages](https://ic3top.github.io/devChallenges/edie-homepage-master/solution/dist/)
 
 ## General info
@@ -11,9 +11,5 @@ DevChallenge page of this project [here.](https://devchallenges.io/solutions/gDV
 ![gif of the web-page](./screenshots/demo.gif)
 
 
-## To-do list:
-* Make SCSS code cleaner by adding some utility classes.
-
-
 ## Status
-Project is: _in progress_
+Project is: finished_
