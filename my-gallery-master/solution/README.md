@@ -9,7 +9,7 @@ DevChallenges page of this project [here.](https://devchallenges.io/solutions/xZ
 
 
 ## Overview
-![demo of the web-page](./screenshots/demo.png)
+![demo of the web-page](./screenshots/demo.jpg)
 
 
 ## Status
