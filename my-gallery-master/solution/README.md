@@ -12,5 +12,9 @@ DevChallenges page of this project [here.](https://devchallenges.io/solutions/xZ
 ![demo of the web-page](./screenshots/demo.jpg)
 
 
+## ToDo list
+  * Add a pop-up
+
+
 ## Status
-Project is: _finished_
+Project is: _in-progress_
