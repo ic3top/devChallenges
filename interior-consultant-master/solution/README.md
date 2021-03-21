@@ -1,5 +1,5 @@
 # Interior-consultant
-> Visit it on [GHpages](https://ic3top.github.io/devChallenges/interior-consultant-master/solution/src/)
+> Visit it on [GHpages](https://ic3top.github.io/devChallenges/interior-consultant-master/solution/src/index.html)
 
 
 ## General info
