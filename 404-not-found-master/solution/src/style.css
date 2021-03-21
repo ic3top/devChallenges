@@ -9,101 +9,102 @@ p {
 
 
 body {
-    min-height: 100vh;
-    font-family: 'Inconsolata', monospace;
-    display: grid;
-    row-gap: 50px;
-    grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: 'Inconsolata', monospace;
+  display: grid;
+  row-gap: 50px;
+  grid-template-rows: auto 1fr auto;
 }
 
 .header {
-    padding: 40px 0 0 80px;
-    font-size: 24px;
-    color: #333333;
-    text-transform: uppercase;
+  padding: 40px 0 0 80px;
+  font-size: 24px;
+  color: #333333;
+  text-transform: uppercase;
 }
 
 .content {
-    display: flex;
-    margin-top: 180px;
-    padding: 0 100px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  display: flex;
+  margin-top: 180px;
+  padding: 0 100px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .message {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .img {
-    max-width: 540px;
-    display: block;
+  max-width: 540px;
+  display: block;
 }
 
 .title {
-    font-size: 64px;
-    line-height: 95px;
-    color: #333333;
+  font-size: 64px;
+  line-height: 95px;
+  color: #333333;
 }
 
 .descr {
-    font-size: 24px;
-    margin-top: 35px;
-    color: #4F4F4F;
+  font-size: 24px;
+  margin-top: 35px;
+  color: #4F4F4F;
 }
 
 .btn {
-    margin-top: 64px;
-    background-color: #333333;
-    padding: 24px 43px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-    border: 1px solid #333333;
-    transition: all .3s ease-in;
-    text-transform: uppercase;
-    cursor: pointer;
+  margin-top: 64px;
+  background-color: #333333;
+  padding: 24px 43px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #333333;
+  transition: all .3s ease-in;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .btn:hover {
-    color: #333333;
-    background-color: inherit;
+  color: #333333;
+  background-color: inherit;
 }
 
 .footer {
-    font-family: 'Montserrat', sans-serif;
-    color: #BDBDBD;
-    font-size: 14px;
-    text-align: center;
-    padding-bottom: 26px;
+  font-family: 'Montserrat', sans-serif;
+  color: #BDBDBD;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 26px;
 }
 
 @media(max-width: 576px) {
-    .header {
-        padding: 5% 0 0 8%;
-        font-size: 24px;
-    }
+  .header {
+    padding: 5% 0 0 8%;
+    font-size: 24px;
+  }
 
-    .content {
-        margin-top: 0;
-        padding: 0 10px;
-    }
+  .content {
+    margin-top: 0;
+    padding: 0 10px;
+  }
 
-    .message {
-        max-width: 100%;
-    }
+  .message {
+    max-width: 100%;
+  }
 
-    .img {
-        width: 300px;;
-    }
+  .img {
+    width: 300px;
+    ;
+  }
 
-    .title {
-        line-height: 70px;
-        margin-top: 60px;
-        font-size: 48px;
-    }
+  .title {
+    line-height: 70px;
+    margin-top: 60px;
+    font-size: 48px;
+  }
 
-    .descr {
-        font-size: 18px;
-    }
+  .descr {
+    font-size: 18px;
+  }
 }
