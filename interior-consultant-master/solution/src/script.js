@@ -1,6 +1,6 @@
 const menu = document.querySelector('.menu');
 const btn = menu.querySelector('.nav-tgl');
-const linksContainer = menu.querySelector('ul')
+const linksContainer = menu.querySelector('#js-hamburger-menu')
 
 btn.addEventListener('click', () => {
   setTimeout(() => { linksContainer.classList.toggle('d-none') }, 300);
