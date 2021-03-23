@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <h1>Checkout</h1>
+      <div class="wrapper">
+        <div class="left">
+          <form action="#">
+            <fieldset>
+              <legend>Contact information</legend>
+              <label for="email">E-mail</label>
+              <input type="text" placeholder="Enter your email..." id="email">
+              <label for="">Phone</label>
+              <input type="text" placeholder="Enter your phone..." id="phone">
+            </fieldset>
+            <fieldset>
+              <legend>Shipping address</legend>
+              <label for="">Full name</label>
+              <input type="text" placeholder="Your name..." value="Rodney Cotton" id="name">
+
+              <label for="">Adress</label>
+              <input type="text" placeholder="Your adress..." id="adress">
+
+              <label for="">City</label>
+              <input type="text" placeholder="Your city..." id="city">
+              <div class="group">
+                <div>
+                  <label for="">Country</label>
+                  <input type="text" placeholder="Your country.." id="country">
+                </div>
+                <div>
+                  <label for="">Postal code</label>
+                  <input type="text" placeholder="Your postal code.." id="postal">
+                </div>
+              </div>
+              <div class="check"><input type="checkbox" name="" id=""><label for="">Save this information for next
+                  time</label>
+              </div>
+            </fieldset>
+            <button type="submit">Continue</button>
+          </form>
+        </div>
+        <div class="card">
+          <div class="product">
+            <img src="./img/photo1.png" class="product_img" alt="backbag">
+            <div class="product_name">Vintage Backbag</div>
+            <div class="product_price">$54.99 <del>$94.99</del></div>
+            <input type="number" name="" id="">
+          </div>
+          <div class="product">
+            <img src="./img/photo2.png" class="product_img" alt="shoes">
+            <div class="product_name">Levi Shoes</div>
+            <div class="product_price">$74.99 <del>$124.99</del></div>
+            <input type="number" name="" id="">
+          </div>
+          <div class="card_footer">
+            <hr>
+            <div class="card_group">
+              <h3>Shipping</h3>
+              <div class="price">$19</div>
+            </div>
+            <hr>
+            <div class="card_group">
+              <h3>Total</h3>
+              <div class="price">$148.99</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>created by <strong>@ic3top</strong> - devChallenges.io</p>
+  </footer>
+</body>
+
+</html>
