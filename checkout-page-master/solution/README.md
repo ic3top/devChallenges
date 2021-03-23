@@ -10,7 +10,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/solutions/Ih6cuhRtK7unRdouh1Cy">
+    <a href="https://devchallenges.io/paths/responsive-web-developer/solutions">
       Solution
     </a>
     <span> | </span>
@@ -44,12 +44,11 @@
 
 - [HTML](https://www.w3schools.com/html/)
 - [CSS](https://www.w3schools.com/css/)
-- [Javascript](https://www.w3schools.com/js/)
 
 ## Features
 
 - Just a checkout page made with css, without any frameworks.
 
-## ToDO list
+## Todo
 
 - Make the code well-formatted and replace some css-lines with utility classes.
