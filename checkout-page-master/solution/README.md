@@ -50,6 +50,6 @@
 
 - Just a checkout page made with css, without any frameworks.
 
-## ToDO list
+## Todo list
 
 - Make the code well-formatted and replace some css-lines with utility classes.
