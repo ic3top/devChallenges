@@ -1,15 +1,51 @@
-# Edie landing-page
-> Visit it on [GHpages](https://ic3top.github.io/devChallenges/edie-homepage-master/solution/dist/)
+<h1 align="center">Edie home-page</h1>
 
-## General info
-It's an ordinary landing page made within 6 hours, I used HTML, **SCSS**, a little JS and **GULP** as a task manager + **bootstrap-grid / reebot v5**. I haven't tried using BEM.  
-You can find same FIGMA mockup [here.](https://www.figma.com/file/ahnGupP4JjTdVJDTRfMRF2/edie-homepage?node-id=1%3A148)    
-DevChallenge page of this project [here.](https://devchallenges.io/solutions/gDVG0DRrh5qu8xNfa5J6)
+<div align="center">
+   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+</div>
 
+<div align="center">
+  <h3>
+    <a href="https://ic3top.github.io/devChallenges/edie-homepage-master/solution/dist/index.html">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/solutions/gDVG0DRrh5qu8xNfa5J6">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0">
+      Challenge
+    </a>
+  </h3>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [Overview](#overview)
+  - [Built With](#built-with)
+- [Features](#features)
+
+<!-- OVERVIEW -->
 
 ## Overview
+
 ![gif of the web-page](./screenshots/demo.gif)
 
+- View the [live demo](https://ic3top.github.io/devChallenges/edie-homepage-master/solution/dist/index.html)
+- 7th Dev Challenges project
+- Fully adaptive page
 
-## Status
-Project is: finished_
+### Built With
+
+- HTML
+- SCSS
+- JS
+- Gulp
+- bootstrap-grid / reebot v5
+
+### Features
+
+- Adaptive hamburger menu

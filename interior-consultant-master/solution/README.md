@@ -1,16 +1,50 @@
-# Interior-consultant
-> Visit it on [GHpages](https://ic3top.github.io/devChallenges/interior-consultant-master/solution/src/index.html)
+<h1 align="center">Interior-consultant</h1>
 
+<div align="center">
+   Solution for a challenge from <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+</div>
 
-## General info
-The feature is that this page has a pretty hamburger menu on viewport < 576px.  
-You can find same FIGMA template [here.](https://www.figma.com/file/3cf83hHRBAGjG5EKPcG2bV/interior-consultant-challenge?node-id=1%3A31)  
-DevChallenges page of this project [here.](https://devchallenges.io/solutions/rN36p6StA0DCg5cRk7vI)
+<div align="center">
+  <h3>
+    <a href="https://ic3top.github.io/devChallenges/interior-consultant-master/solution/src/index.html">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/solutions/rN36p6StA0DCg5cRk7vI">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb">
+      Challenge
+    </a>
+  </h3>
+</div>
 
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [Overview](#overview)
+  - [Built With](#built-with)
+- [Features](#features)
+
+<!-- OVERVIEW -->
 
 ## Overview
+
 ![demo of the web-page](./screenshots/demo.png)
 
+- View the [live demo](https://ic3top.github.io/devChallenges/interior-consultant-master/solution/src/index.html)
+- 3rd Dev Challenges project
+- Fully adaptive page
 
-## Status
-Project is: _finished_
+### Built With
+
+- HTML
+- CSS
+- JS
+
+### Features
+
+- Cool hamburger menu on mobiles
+

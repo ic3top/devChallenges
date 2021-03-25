@@ -33,7 +33,7 @@
 
 ![screenshot](./screenshots/demo.jpg)
 
-- View the [live demo](https://ic3top.github.io/devChallenges/checkout-page-master/solution/src/index.html)
+- View the [live demo](https://ic3top.github.io/devChallenges/404-not-found-master/solution/src/index.html)
 - 1rd Dev Challenges project
 - Fully adaptive page
 

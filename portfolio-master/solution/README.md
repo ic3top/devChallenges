@@ -1,18 +1,51 @@
-# Another portfolio template
-> Visit it on [GHpages](https://ic3top.github.io/devChallenges/portfolio-master/solution/dist/)
+<h1 align="center">Portfolio page</h1>
 
-## General info
-It`s another portfolio template made with **SCSS HTML JS** and **GULP** as a task-manager + **Bootstrap-reboot v4.3.1**. I haven't tried using BEM.
-You can find same FIGMA template [here.](https://www.figma.com/file/O7Omgz2iVR7Vox7shf7O8e/portfolio?node-id=0%3A1)  
-DevChallenges page of this project [here.](https://devchallenges.io/solutions/Pf6FWOxsp2RoJzJckcQX)
+<div align="center">
+   Solution for a challenge from <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+</div>
+
+<div align="center">
+  <h3>
+    <a href="https://ic3top.github.io/devChallenges/portfolio-master/solution/dist/index.html">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/solutions/Pf6FWOxsp2RoJzJckcQX">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt">
+      Challenge
+    </a>
+  </h3>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [Overview](#overview)
+  - [Built With](#built-with)
+- [Todo](#to-do)
+<!-- OVERVIEW -->
 
 ## Overview
+
 ![gif of the web-page](./screenshots/demo.gif)
 
+- View the [live demo](https://ic3top.github.io/devChallenges/portfolio-master/solution/dist/index.html)
+- 8th Dev Challenges project
+- Fully adaptive page
 
-## To-do list:
+### Built With
+
+- HTML
+- SCSS
+- JS
+- Gulp
+- Bootstrap Reboot v4.3.1  
+
+### To-do
+
 * simple pagination with js
 
-
-## Status
-Project is: _in progress_

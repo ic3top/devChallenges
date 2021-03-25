@@ -1,16 +1,43 @@
-# Team-page
-> Visit it on [GHpages](https://ic3top.github.io/devChallenges/my-team-page-master/solution/src/)
+<h1 align="center">Team page</h1>
 
+<div align="center">
+   Solution for a challenge from <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+</div>
 
-## General info
-I used grid for this one.  
-You can find same FIGMA template [here.](https://www.figma.com/file/F8d1qJsorEdY47N74HLxQ4/team-page-challenge?node-id=1%3A40)  
-DevChallenges page of this project [here.](https://devchallenges.io/solutions/6hmzbGcbWNwK6RuFPFbF)
+<div align="center">
+  <h3>
+    <a href="https://ic3top.github.io/devChallenges/my-team-page-master/solution/src/index.html">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/solutions/6hmzbGcbWNwK6RuFPFbF">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U">
+      Challenge
+    </a>
+  </h3>
+</div>
 
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [Overview](#overview)
+  - [Built With](#built-with)
+
+<!-- OVERVIEW -->
 
 ## Overview
+
 ![demo of the web-page](./screenshots/demo.png)
 
+- View the [live demo](https://ic3top.github.io/devChallenges/my-team-page-master/solution/src/index.html)
+- 2th Dev Challenges project
+- Fully adaptive page
 
-## Status
-Project is: _finished_
+### Built With
+
+- HTML
+- CSS

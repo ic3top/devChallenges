@@ -1,16 +1,49 @@
-# Recipe page
-> Visit it on [GHpages](https://ic3top.github.io/devChallenges/recipe-page-master/solution/src/)
+<h1 align="center">Recipe page</h1>
 
+<div align="center">
+   Solution for a challenge from <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+</div>
 
-## General info
-I was mastering position sticky in this task. BTW I used Bootstrap-grid and reboot (v5.0.0-beta2)    
-You can find same FIGMA template [here.](https://www.figma.com/file/2jVBTSKeCYF0dIN6fi0stX/recipe-blog-challenge?node-id=1%3A100)  
-DevChallenges page of this project [here.](https://devchallenges.io/solutions/rcHmGe9iNbbT0h96LzJF)
+<div align="center">
+  <h3>
+    <a href="https://ic3top.github.io/devChallenges/recipe-page-master/solution/src/index.html">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/solutions/rcHmGe9iNbbT0h96LzJF">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht">
+      Challenge
+    </a>
+  </h3>
+</div>
 
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [Overview](#overview)
+  - [Built With](#built-with)
+- [Features](#fetures)
+
+<!-- OVERVIEW -->
 
 ## Overview
+
 ![demo of the web-page](./screenshots/demo-ipad.jpg)
 
+- View the [live demo](https://ic3top.github.io/devChallenges/recipe-page-master/solution/src/index.html)
+- 4th Dev Challenges project
+- Fully adaptive page
 
-## Status
-Project is: _finished_
+### Built With
+
+- HTML
+- CSS
+- Bootstrap grid and reboot (v5.0.0-beta2)  
+
+### Features
+
+- Realization of position sticky(I was trying it for the first time)

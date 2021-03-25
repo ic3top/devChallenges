@@ -37,7 +37,7 @@
 ![screenshot](./screenshots/screenshot-mobile.png)
 
 - View the [live demo](https://ic3top.github.io/devChallenges/checkout-page-master/solution/src/index.html)
-- 3rd Dev Challenges project
+- 6rd Dev Challenges project
 - Fully adaptive page
 
 ### Built With
