@@ -2,7 +2,7 @@
 
 ### About this repository
 
-Hello everyone, this repository contains all of mine solutions for DevChallenges. You can see the list of my completed challenges [here](https://devchallenges.io/portfolio/ic3top).  
+:wave:Hello everyone, this repository contains all of mine solutions for DevChallenges. You can see the list of my completed challenges [here](https://devchallenges.io/portfolio/ic3top).  
 If you are not familiar with DevChallenges let me tell you what is it.
 
 ### What is DevChallenges🤔?
