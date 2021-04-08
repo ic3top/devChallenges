@@ -1,4 +1,4 @@
-<h1 align="center">Checkout Page</h1>
+<h1 align="center">Button component</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://ic3top.github.io/devChallenges/button-component/dist/index.html">
+    <a href="https://ic3top.github.io/devChallenges/button-component/dist/">
       Demo
     </a>
     <span> | </span>
@@ -14,7 +14,7 @@
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO">
+    <a href="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY">
       Challenge
     </a>
   </h3>
@@ -27,7 +27,7 @@
 - [Overview](#overview)
     - [Built With](#built-with)
 - [Features](#features)
-- [Inspiration]
+- [Inspiration](#inspiration)
 
 <!-- OVERVIEW -->
 
@@ -36,7 +36,7 @@
 ![screenshot](./screenshots/screenshot.png)
 ![screenshot](./screenshots/screenshot-mobile.png)
 
-- View the [live demo](https://ic3top.github.io/devChallenges/button-component/dist/index.html)
+- View the [live demo](https://ic3top.github.io/devChallenges/button-component/dist/)
 - 1st Front-end Challenges project
 
 ### Built With
