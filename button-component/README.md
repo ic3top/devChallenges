@@ -10,7 +10,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/paths/responsive-web-developer/solutions">
+    <a href="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY">
       Solution
     </a>
     <span> | </span>
@@ -32,9 +32,8 @@
 <!-- OVERVIEW -->
 
 ## Overview
-
-![screenshot](./screenshots/screenshot.png)
-![screenshot](./screenshots/screenshot-mobile.png)
+This is a button component which you can test on a demo.
+![screenshot](./screenshots/button-component.png)
 
 - View the [live demo](https://ic3top.github.io/devChallenges/button-component/dist/)
 - 1st Front-end Challenges project
@@ -50,4 +49,4 @@
 - Reusable button component, change color, icon or/and variant.
 
 ## Inspiration
-This my first tiny project from front-end category. It helped me better understood how to work with props.
+This my first tiny project from front-end category. It helped me better understood how to work with props and dynamic styles in Vue framework.
