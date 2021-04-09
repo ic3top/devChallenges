@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://ic3top.github.io/devChallenges/button-component/dist/">
+    <a href="https://ic3top.github.io/devChallenges/button-component/dist/index.html">
       Demo
     </a>
     <span> | </span>
@@ -32,10 +32,10 @@
 <!-- OVERVIEW -->
 
 ## Overview
-This is a button component which you can test on a demo.
+This is a button component which you can test with a demo.
 ![screenshot](./screenshots/button-component.png)
 
-- View the [live demo](https://ic3top.github.io/devChallenges/button-component/dist/)
+- View the [live demo](https://ic3top.github.io/devChallenges/button-component/dist/index.html)
 - 1st Front-end Challenges project
 
 ### Built With
