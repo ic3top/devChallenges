@@ -47,7 +47,7 @@ All in all, it works great.
 - CSS
 - JS/Vue
 
-## Feature
+## Features
 
 - Add new task
 - Complete the task
