@@ -1,16 +1,23 @@
 <template>
   <div class="container">
-    <button>All</button>
-    <button>Active</button>
-    <button>Completed</button>
+    <button @click="showAll" :class="{ active: getCurrentSort === 'All'}">All</button>
+    <button @click="showUncompleted" :class="{ active: getCurrentSort === 'Active'}">Active</button>
+    <button @click="showCompleted" :class="{ active: getCurrentSort === 'Completed'}">Completed</button>
   </div>
 </template>
 
 <script>
-export default { name: 'SortingButtons',
-  data() {
-    return {};
-  } };
+import { mapActions, mapGetters } from 'vuex';
+
+export default {
+  name: 'SortingButtons',
+  methods: {
+    ...mapActions(['showAll', 'showCompleted', 'showUncompleted'])
+  },
+  computed: {
+    ...mapGetters(['getCurrentSort'])
+  }
+};
 </script>
 
 <style scoped>
@@ -24,7 +31,8 @@ export default { name: 'SortingButtons',
 button {
   min-width: 70px;
   padding: 10px 20px;
-  border: none;
+  border-width: 0 0 2px 0;
+  border-color: #87CEFA;
   background-color: inherit;
   font-size: 14px;
   font-weight: 500;
@@ -32,6 +40,9 @@ button {
 }
 
 button:hover {
-  box-shadow: 7px 9px 15px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 7px 9px 15px 0 rgba(34, 60, 80, 0.2);
+}
+.active {
+  border-bottom: 2px solid blue;
 }
 </style>

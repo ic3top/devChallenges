@@ -32,9 +32,11 @@
 <!-- OVERVIEW -->
 
 ## Overview
-Well, it`s a todo app. No other comments here.  
+Well, it's a todo app, nothing new. I think I made it a little too complicated because of using Vuex and probably logic that implemented inside.  
+All in all, it works great.  
 
-![screenshot](./screenshots/todo-app.png)
+
+![screenshot](./screenshot/todo-app-illustration.png)
 
 - View the [live demo](https://ic3top.github.io/devChallenges/todo-app/dist/index.html)
 - 2nd Front-end Challenges project
@@ -49,6 +51,11 @@ Well, it`s a todo app. No other comments here.
 
 - Add new task
 - Complete the task
+- Delete any task
+- Delete all completed in once
+- Sort tasks (All/Active/Completed)
+- Tasks are saved into localStorage  
+- The app is fully adaptive
 
 ## Inspiration
 Todo-app is a tradition! 

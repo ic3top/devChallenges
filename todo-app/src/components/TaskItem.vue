@@ -1,15 +1,14 @@
 <template>
   <div class="task">
-    <input v-model="done" type="checkbox">
+    <input :checked="finished" @change="emitFinished" type="checkbox">
     <div class="text" :class="taskStyles">
       <p>{{ text }}</p>
     </div>
+    <button @click="emmitDelete" class="close"><img src="@/assets/close.svg" alt="close button"></button>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
-
 export default {
   name: 'TaskItem',
   props: {
@@ -26,23 +25,18 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      done: false
-    }
-  },
-  watch: {
-    done() {
-      this.setDone({ id: Number(this.id), status: this.done })
+  methods: {
+    emitFinished() {
+      this.$emit('todoFinished', { todoID: this.id });
+    },
+    emmitDelete() {
+      this.$emit('todoDelete', this.id);
     }
   },
   computed: {
     taskStyles() {
-      return { done: this.done };
+      return { doneItem: this.finished };
     }
-  },
-  methods: {
-    ...mapActions(['setDone'])
   }
 };
 </script>
@@ -51,10 +45,11 @@ export default {
 .task {
   max-width: 320px;
   padding: 10px;
-  margin: 3vh auto;
+  margin-top: 3vh;
   border-radius: 12px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: relative;
   box-shadow: 0 4px 8px 2px rgba(34, 60, 80, 0.2);
   background-color: #fff;
@@ -65,14 +60,14 @@ export default {
   box-shadow: 0 8px 12px 4px rgba(34, 60, 80, 0.2);
 }
 
-.done {
+.doneItem {
   text-decoration: line-through;
 }
-.done:after {
+.doneItem:after {
   position: absolute;
-  content: 'done!';
+  content: 'Done!';
   top: -5px;
-  right: -15px;
+  right: -10px;
   padding: 2px 5px;
   border-radius: 5px;
   font-size: 14px;
@@ -84,5 +79,15 @@ input {
   margin-right: 1rem;
   width: 18px;
   height: 18px;
+}
+
+.close {
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.close img {
+  width: 15px;
+  height: 15px;
 }
 </style>

@@ -28,34 +28,41 @@ export default {
 
 <style scoped>
 form {
-  margin-top: 3vh;
+  margin: 3vh auto 0 auto;
   display: flex;
   justify-content: center;
+  max-width: 320px;
 }
 
 input {
-  border-radius: 12px;
   border: 1px solid #BDBDBD;
-  padding: 10px;
   margin-right: 20px;
+  outline: 0;
+  padding: 5px;
 }
 
 input:focus {
   outline: none !important;
-  box-shadow: 0 0 10px #719ECE;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, .2);
 }
 
-button {
-  min-width: 50px;
-  padding: 10px 20px;
-  font-size: 14px;
-  border: none;
-  background-color: #fff;
-  transition: all 0.3s ease;
-  border-radius: 12px;
+input::placeholder {
+  color: #a3a3a3;
 }
 
 button:hover {
-  box-shadow: 2px 7px 15px rgba(127, 177, 243, 0.4);
+  background: #7b89e6;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  transition: all .1s ease;
+  background-color: #7f8ff4;
+  border-radius: 2px;
+  padding: 10px 25px;
+}
+button:active {
+   box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
 }
 </style>

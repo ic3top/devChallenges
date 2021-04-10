@@ -1,17 +1,29 @@
 <template>
-  <div class="list">
-    <task-item
-      v-for="task in getTodos"
-      :key="task.id"
-      :id="task.id"
-      :text="task.text"
-      :finished="task.done">
-    </task-item>
+  <div class="container">
+    <div v-show="getTotal" class="total">
+      Total: {{ totalAmount }}
+    </div>
+    <div class="list">
+      <task-item
+        v-for="task in getTodos"
+        v-show="task.shown"
+        :key="task.id"
+        :id="task.id"
+        :text="task.text"
+        :finished="task.completed"
+        @todoFinished="finishHandler"
+        @todoDelete="deleteHandler">
+      </task-item>
+    </div>
+    <div  v-show="getCurrentSort === 'Completed' && getCompletedLength !== 0" class="delete-container">
+      <button class="deleteBtn" @click="deleteCompleted"><img src="@/assets/trash.svg" alt="delete all button"> Delete all
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import TaskItem from './TaskItem.vue';
 
 export default { name: 'TaskList',
@@ -20,13 +32,71 @@ export default { name: 'TaskList',
     return {}
   },
   computed: {
-    ...mapGetters(['getTodos'])
+    ...mapGetters(['getTodos', 'getTotal', 'getCompletedLength', 'getCurrentSort', 'getCurrentSort']),
+    totalAmount() {
+      return `${this.getTotal}/${this.getCompletedLength}`;
+    }
+  },
+  watch: {
+    getTodos: {
+      handler() {
+        localStorage.setItem('TODOS', JSON.stringify(this.getTodos));
+      },
+      deep: true
+    },
+    getCurrentSort() {
+      localStorage.setItem('currentSort', this.getCurrentSort);
+    }
+  },
+  methods: {
+    ...mapActions(['initialiseStore', 'setCompleted', 'deleteByID', 'deleteCompleted']),
+    finishHandler(config) {
+      this.setCompleted(config);
+    },
+    deleteHandler(id) {
+      this.deleteByID(id);
+    }
+  },
+  created() {
+    this.initialiseStore();
   }
 };
 </script>
 
 <style scoped>
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+.total {
+  margin: 2vh auto 0 auto;
+  text-align: left;
+  font-size: 12px;
+}
+
 .list {
-  margin-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.delete-container {
+  width: 100%;
+  padding-bottom: 5vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteBtn {
+  background: inherit;
+  border: none;
+  transition: all .2s ease;
+  background-color: #7f8ff4;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  padding: 5px 25px;
+  font-size: 12px;
+}
+.deleteBtn:hover {
+  background: #7b89e6;
 }
 </style>
