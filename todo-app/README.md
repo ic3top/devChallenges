@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://ic3top.github.io/devChallenges/todo-app/dist/index.html">
+    <a href="https://ic3top.github.io/devChallenges/todo-app/dist/">
       Demo
     </a>
     <span> | </span>
@@ -38,7 +38,7 @@ All in all, it works great.
 
 ![screenshot](./screenshot/todo-app-illustration.png)
 
-- View the [live demo](https://ic3top.github.io/devChallenges/todo-app/dist/index.html)
+- View the [live demo](https://ic3top.github.io/devChallenges/todo-app/dist/)
 - 2nd Front-end Challenges project
 
 ### Built With
