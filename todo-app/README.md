@@ -10,7 +10,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY">
+    <a href="https://devchallenges.io/solutions/4DA3pLzPNcxTC6uqFFlT">
       Solution
     </a>
     <span> | </span>
@@ -50,6 +50,7 @@ All in all, it works great.
 ## Features
 
 - Add new task
+- Edit task  
 - Complete the task
 - Delete any task
 - Delete all completed in once

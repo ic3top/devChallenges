@@ -8,7 +8,8 @@
         :text="task.text"
         :finished="task.completed"
         @todoFinished="finishHandler"
-        @todoDelete="deleteHandler">
+        @todoDelete="deleteHandler"
+        @editTodo="editTodoHandler">
       </task-item>
     </ul>
     <div  v-show="getCurrentSort === 'Completed' && getTodos.length" class="delete-container">
@@ -20,7 +21,8 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions, mapMutations } from 'vuex';
+
 import TaskItem from './TaskItem.vue';
 
 export default { name: 'TaskList',
@@ -44,11 +46,17 @@ export default { name: 'TaskList',
   },
   methods: {
     ...mapActions(['initialiseStore', 'setCompleted', 'deleteByID', 'deleteCompleted']),
+    ...mapMutations(['editTodo']),
     finishHandler(config) {
       this.setCompleted(config);
     },
     deleteHandler(id) {
       this.deleteByID(id);
+    },
+    editTodoHandler(config) {
+      if (config) {
+        this.editTodo(config);
+      }
     }
   },
   created() {

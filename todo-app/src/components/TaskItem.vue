@@ -1,10 +1,23 @@
 <template>
   <li class="task" :class="taskStyles">
-    <input :checked="finished" @change="emitFinished" type="checkbox" class="complete-input">
-    <div class="text">
-      <p>{{ text }}</p>
+    <input :checked="finished"
+           @change="emitFinished"
+           type="checkbox"
+           class="complete-input">
+    <div class="text" @dblclick="editToggle">
+      <p v-if="!inEdit">{{ text }}</p>
+      <input v-else
+             class="edit-input"
+             v-model="editedText"
+             type="text"
+             @keyup.enter="doneEdit"
+             @keyup.esc="cancelEdit"
+             @blur="cancelEdit"
+      >
     </div>
-    <button @click="emmitDelete" class="delete-todo-btn"><img src="@/assets/close.svg" alt="close button"></button>
+    <button @click="emmitDelete" class="delete-todo-btn">
+      <img src="@/assets/close.svg" alt="close button">
+    </button>
   </li>
 </template>
 
@@ -25,17 +38,40 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      inEdit: false,
+      editedText: this.text
+    }
+  },
+  computed: {
+    taskStyles() {
+      return { doneItem: this.finished };
+    }
+  },
   methods: {
     emitFinished() {
       this.$emit('todoFinished', { todoID: this.id });
     },
     emmitDelete() {
       this.$emit('todoDelete', this.id);
-    }
-  },
-  computed: {
-    taskStyles() {
-      return { doneItem: this.finished };
+    },
+    editToggle() {
+      this.inEdit = !this.inEdit;
+    },
+    doneEdit() {
+      if (!this.editedText || this.editedText.length > 40) {
+        this.cancelEdit();
+        return;
+      }
+      // todo: autofocus on input
+      const config = { text: this.editedText, todoID: this.id }
+      this.$emit('editTodo', config);
+      this.cancelEdit();
+    },
+    cancelEdit() {
+      this.inEdit = false;
+      this.editedText = this.text;
     }
   }
 };
@@ -81,6 +117,14 @@ export default {
   color: #fff;
   transform: rotateZ(30deg);
 }
+
+.edit-input {
+  font-size: 16px;
+  line-height: 40px;
+  padding: 5px;
+  text-align: center;
+}
+
 .complete-input {
   margin-right: 1rem;
   width: 18px;

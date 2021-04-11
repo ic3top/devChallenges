@@ -1,5 +1,6 @@
 <template>
   <footer>
+    Double click for editing <br>
     Written by <a href="https://github.com/ic3top">ic3top</a> - devChallenges.io
   </footer>
 </template>
@@ -14,7 +15,7 @@ export default {
 footer {
   width: 100%;
   padding: 1vh 0;
-  font-size: 10px;
+  font-size: .8rem;
   position: fixed;
   bottom: 0;
   left: 0;

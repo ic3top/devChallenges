@@ -17,10 +17,12 @@ export default {
     ...mapActions(['addTodo']),
     onAdd(e) {
       e.preventDefault();
-      if (this.text) {
-        this.addTodo(this.text);
-        this.text = '';
+      if (!(this.text.length < 40)) {
+        this.text = 'Too big length!'
+        return;
       }
+      this.addTodo(this.text);
+      this.text = '';
     }
   }
 };

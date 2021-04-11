@@ -16,6 +16,9 @@ export default createStore({
     addTodo(state, taskObject) {
       state.todos.push(taskObject);
     },
+    editTodo(state, { text, todoID }) {
+      state.todos.find(({ id }) => todoID === id).text = text;
+    },
     setCompleted(state, { todoID }) {
       const current = state.todos.find(({ id }) => todoID === id).completed;
       state.todos.find(({ id }) => todoID === id).completed = !current;
