@@ -39,8 +39,10 @@ body {
   margin: 15px auto 0 auto;
 }
 
-button, input {
+button, input, ul, li {
   font-family: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 #app {

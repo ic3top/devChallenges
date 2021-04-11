@@ -66,7 +66,7 @@ export default createStore({
   },
   getters: {
     getTodos(state) {
-      return state.todos;
+      return state.todos.filter(({ shown }) => shown);
     },
     getById: (state) => (todoID) => state.todos.filter(({ id }) => id === todoID)[0],
     getTotal(state) {

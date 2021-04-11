@@ -1,12 +1,8 @@
 <template>
   <div class="container">
-    <div v-show="getTotal" class="total">
-      Total: {{ totalAmount }}
-    </div>
-    <div class="list">
+    <ul class="list">
       <task-item
         v-for="task in getTodos"
-        v-show="task.shown"
         :key="task.id"
         :id="task.id"
         :text="task.text"
@@ -14,9 +10,10 @@
         @todoFinished="finishHandler"
         @todoDelete="deleteHandler">
       </task-item>
-    </div>
-    <div  v-show="getCurrentSort === 'Completed' && getCompletedLength !== 0" class="delete-container">
-      <button class="deleteBtn" @click="deleteCompleted"><img src="@/assets/trash.svg" alt="delete all button"> Delete all
+    </ul>
+    <div  v-show="getCurrentSort === 'Completed' && getTodos.length" class="delete-container">
+      <button class="deleteBtn" @click="deleteCompleted">
+        <img src="@/assets/trash.svg" alt="delete all button"> Delete all
       </button>
     </div>
   </div>
@@ -28,9 +25,6 @@ import TaskItem from './TaskItem.vue';
 
 export default { name: 'TaskList',
   components: { TaskItem },
-  data() {
-    return {}
-  },
   computed: {
     ...mapGetters(['getTodos', 'getTotal', 'getCompletedLength', 'getCurrentSort', 'getCurrentSort']),
     totalAmount() {
@@ -68,6 +62,7 @@ export default { name: 'TaskList',
   max-width: 320px;
   margin: 0 auto;
 }
+
 .total {
   margin: 2vh auto 0 auto;
   text-align: left;
@@ -76,6 +71,7 @@ export default { name: 'TaskList',
 
 .list {
   padding-bottom: 5vh;
+  list-style: none;
 }
 
 .delete-container {
@@ -93,9 +89,10 @@ export default { name: 'TaskList',
   display: flex;
   align-items: center;
   border-radius: 2px;
-  padding: 5px 25px;
+  padding: 10px 25px;
   font-size: 12px;
 }
+
 .deleteBtn:hover {
   background: #7b89e6;
 }

@@ -1,11 +1,11 @@
 <template>
-  <div class="task">
-    <input :checked="finished" @change="emitFinished" type="checkbox">
-    <div class="text" :class="taskStyles">
+  <li class="task" :class="taskStyles">
+    <input :checked="finished" @change="emitFinished" type="checkbox" class="complete-input">
+    <div class="text">
       <p>{{ text }}</p>
     </div>
-    <button @click="emmitDelete" class="close"><img src="@/assets/close.svg" alt="close button"></button>
-  </div>
+    <button @click="emmitDelete" class="delete-todo-btn"><img src="@/assets/close.svg" alt="close button"></button>
+  </li>
 </template>
 
 <script>
@@ -62,7 +62,13 @@ export default {
 
 .doneItem {
   text-decoration: line-through;
+  background-color: lightgrey;
 }
+
+.doneItem:hover {
+  box-shadow: 0 4px 8px 2px rgba(34, 60, 80, 0.2);
+}
+
 .doneItem:after {
   position: absolute;
   content: 'Done!';
@@ -75,19 +81,26 @@ export default {
   color: #fff;
   transform: rotateZ(30deg);
 }
-input {
+.complete-input {
   margin-right: 1rem;
   width: 18px;
   height: 18px;
 }
 
-.close {
+.delete-todo-btn {
   border: none;
   display: flex;
   align-items: center;
+  background-color: inherit;
+  transition: all .2s ease;
 }
-.close img {
+
+.delete-todo-btn img {
   width: 15px;
   height: 15px;
+}
+
+.delete-todo-btn:hover {
+  transform: scale(1.3);
 }
 </style>
