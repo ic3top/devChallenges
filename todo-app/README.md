@@ -36,7 +36,7 @@ Well, it's a todo app, nothing new. I think I made it a little too complicated b
 All in all, it works great.  
 
 
-![screenshot](./screenshot/todo-app-illustration.png)
+![screenshot](./screenshot/todo-app.png)
 
 - View the [live demo](https://ic3top.github.io/devChallenges/todo-app/dist/)
 - 2nd Front-end Challenges project
