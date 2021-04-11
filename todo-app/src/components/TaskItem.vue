@@ -1,22 +1,27 @@
 <template>
-  <li class="task" :class="taskStyles">
+  <li
+    :class="taskStyles"
+    class="task"
+    @dblclick="editToggle"
+  >
     <input :checked="finished"
-           @change="emitFinished"
+           class="complete-input"
            type="checkbox"
-           class="complete-input">
-    <div class="text" @dblclick="editToggle">
+           @change="emitFinished">
+    <div class="text">
       <p v-if="!inEdit">{{ text }}</p>
       <input v-else
-             class="edit-input"
              v-model="editedText"
+             ref="email"
+             class="edit-input"
              type="text"
+             @blur="doneEdit"
              @keyup.enter="doneEdit"
              @keyup.esc="cancelEdit"
-             @blur="cancelEdit"
       >
     </div>
-    <button @click="emmitDelete" class="delete-todo-btn">
-      <img src="@/assets/close.svg" alt="close button">
+    <button class="delete-todo-btn" @click="emmitDelete">
+      <img alt="close button" src="@/assets/close.svg">
     </button>
   </li>
 </template>
@@ -42,7 +47,7 @@ export default {
     return {
       inEdit: false,
       editedText: this.text
-    }
+    };
   },
   computed: {
     taskStyles() {
@@ -58,20 +63,26 @@ export default {
     },
     editToggle() {
       this.inEdit = !this.inEdit;
+      setTimeout(this.setFocusOnInput);
     },
     doneEdit() {
       if (!this.editedText || this.editedText.length > 40) {
         this.cancelEdit();
         return;
       }
-      // todo: autofocus on input
-      const config = { text: this.editedText, todoID: this.id }
+      const config = {
+        text: this.editedText,
+        todoID: this.id
+      };
       this.$emit('editTodo', config);
-      this.cancelEdit();
+      this.inEdit = false;
     },
     cancelEdit() {
       this.inEdit = false;
       this.editedText = this.text;
+    },
+    setFocusOnInput() {
+      this.$refs.email.focus();
     }
   }
 };
