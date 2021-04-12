@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://ic3top.github.io/devChallenges/quote-generator/dist/index.html">
+    <a href="https://ic3top.github.io/devChallenges/quote-generator/dist/">
       Demo
     </a>
     <span> | </span>
@@ -35,7 +35,7 @@
 It`s a random quote generator app. During this project I learn lots of new about axios and how easy is it, also I was using Element plus UI(seems like it was unnecessary in such project) second time just for check it out and see how does it go.
 ![screenshot](./screenshot/quote-app.png)
 
-- View the [live demo](https://ic3top.github.io/devChallenges/quote-generator/dist/index.html)
+- View the [live demo](https://ic3top.github.io/devChallenges/quote-generator/dist/)
 - 3rd Front-end Challenges project
 
 ### Built With
