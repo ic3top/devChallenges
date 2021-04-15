@@ -51,10 +51,10 @@ It`s a random quote generator app. During this project I learn lots of new about
 - Read another quotes from the same author
 - Fully adaptive
 - axios (for requests to [this API](https://github.com/pprathameshmore/QuoteGarden))
+- Pagination for more than 10 quotes
 
 ## Todos
 
-- Create a pagination for author`s quotes
 - Search for quotes depending on genre/query/author
 - rebuild/delete all unnecessary element plus components
 - add margin-bottom to container = fix footer
