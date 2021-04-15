@@ -111,7 +111,7 @@ body::-webkit-scrollbar-track {
 
 <style scoped>
 .el-container {
-  min-height: 100vh;
+  min-height: 95vh;
   justify-content: space-between;
   margin-bottom: 5vh;
 }
