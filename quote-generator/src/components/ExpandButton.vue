@@ -1,12 +1,16 @@
 <template>
-  <button class="details" @click="setExpanded(true)">
+  <button ref="buttonExpand"
+          class="details"
+          @click="expandQuotesHandler"
+          @keyup.enter="expandQuotesHandler"
+          :class="{ disabled: getIsExpanded }">
     <span class="author">{{ quote.quoteAuthor }}</span>
     <span class="genre">{{ quote.quoteGenre }}</span>
   </button>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   name: 'ExpandButton',
@@ -17,7 +21,14 @@ export default {
     },
   },
   methods: {
-    ...mapActions(['setExpanded']),
+    ...mapActions(['expandQuotes']),
+    expandQuotesHandler() {
+      this.expandQuotes(true);
+      this.$refs.buttonExpand.blur();
+    },
+  },
+  computed: {
+    ...mapGetters(['getIsExpanded', 'getPagination']),
   },
 };
 </script>
@@ -39,7 +50,7 @@ export default {
   content: '⇒';
   color: white;
   position: absolute;
-  font-size: 5vh;
+  font-size: max(5vh, 3vw);
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
@@ -63,12 +74,24 @@ export default {
   display: block;
   color: #ffffff;
   font-weight: 700;
-  font-size: 2vh;
+  font-size: max(2vh, 1vw);
 }
 
 .genre {
   color: #828282;
   font-weight: 500;
-  font-size: 1.4vh;
+  font-size: max(1.4vh, 0.7vw);
+}
+
+.disabled {
+  background-color: #4a4949;
+}
+
+.disabled:hover {
+  background-color: #4a4949;
+}
+
+.disabled::after {
+  right: 10px;
 }
 </style>

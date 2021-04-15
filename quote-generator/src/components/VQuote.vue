@@ -25,10 +25,11 @@ export default {
 <style scoped>
 
 .quote {
-  font-size: 3.5vh;
+  font-size: max(3.5vh, 1vw);
   font-weight: 500;
   padding: 20px;
   min-height: 20vh;
+  text-align: left;
 }
 
 </style>
