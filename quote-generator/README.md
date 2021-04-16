@@ -57,5 +57,3 @@ It`s a random quote generator app. During this project I learn lots of new about
 
 - Search for quotes depending on genre/query/author
 - rebuild/delete all unnecessary element plus components
-- add margin-bottom to container = fix footer
-- implement better loading setup on requests
