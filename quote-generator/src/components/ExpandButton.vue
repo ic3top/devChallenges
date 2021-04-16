@@ -1,6 +1,6 @@
 <template>
   <button ref="buttonExpand"
-          class="details"
+          class="buttonExpand"
           @click="expandQuotesHandler"
           @keyup.enter="expandQuotesHandler"
           :class="{ disabled: getIsExpanded }">
@@ -34,19 +34,20 @@ export default {
 </script>
 
 <style scoped>
-.details {
+.buttonExpand {
   display: block;
   position: relative;
   width: 100%;
   border: 3px solid #333333;
   border-radius: 5px;
+  margin-top: 4vh;
   outline: none;
   background-color: #333333;
   padding: 2.4vw 0 1.4vw 2vw;
   text-align: left;
 }
 
-.details::after {
+.buttonExpand::after {
   content: '⇒';
   color: white;
   position: absolute;
@@ -57,16 +58,16 @@ export default {
   transition: all .2s ease;
 }
 
-.details:focus {
+.buttonExpand:focus {
   border: 3px solid #F7DF94;
   background-color: #3A3A3A;
 }
 
-.details:hover::after {
+.buttonExpand:hover::after {
   right: 10px;
 }
 
-.details:hover {
+.buttonExpand:hover {
   background-color: #3A3A3A;
 }
 

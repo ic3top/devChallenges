@@ -1,5 +1,6 @@
 <template>
   <el-header>
+<!--    <search-button></search-button>-->
     <el-button type="info"
                :loading="getLoadingState"
                icon="el-icon-refresh"
@@ -11,9 +12,13 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+// import SearchButton from './SearchButton.vue';
 
 export default {
   name: 'VHeader',
+  components: {
+    // SearchButton,
+  },
   computed: {
     ...mapGetters(['getLoadingState']),
   },
@@ -25,9 +30,10 @@ export default {
 
 <style scoped>
 .el-header {
-  padding: 3vh 5vw 0 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 3vh 5vw 0;
   width: 100%;
-  text-align: right;
   z-index: 99;
   position: fixed;
 }

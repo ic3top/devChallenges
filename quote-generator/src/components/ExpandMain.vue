@@ -3,6 +3,7 @@
     <el-row>
       <el-col :xl="{span: 12, offset: 6}" :sm="{span: 16, offset: 4}">
         <v-quote></v-quote>
+        <expand-button :quote="getRandomQuote"></expand-button>
       </el-col>
     </el-row>
     <el-row>
@@ -29,12 +30,14 @@
 import { mapGetters } from 'vuex';
 import VQuote from '@/components/VQuote.vue';
 import ExpandPagination from '@/components/ExpandPagination.vue';
+import ExpandButton from './ExpandButton.vue';
 
 export default {
   name: 'ExpandMain',
   components: {
     VQuote,
     ExpandPagination,
+    ExpandButton,
   },
   computed: {
     ...mapGetters(['getLoadingState', 'getIsExpanded', 'getRandomQuote', 'getAuthorQuotes', 'getPagination', 'getTotalAmountOfQuotes']),
@@ -47,6 +50,7 @@ export default {
   position: relative;
   font-size: max(2.5vh, 1vw);
   margin-top: 1vh;
+  text-align: left;
 }
 
 .el-card::before {
