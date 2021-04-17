@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://ic3top.github.io/devChallenges/quote-generator/dist/index.html">
+    <a href="https://ic3top.github.io/devChallenges/quote-generator/dist/search/sad">
       Demo
     </a>
     <span> | </span>
