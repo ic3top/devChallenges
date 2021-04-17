@@ -44,16 +44,16 @@ It`s a random quote generator app. During this project I learn lots of new about
 - CSS
 - JS/Vue
 - Element plus UI library
+- axios (for requests to [this API](https://github.com/pprathameshmore/QuoteGarden))
 
 ## Feature
 
 - Search for a random quote
+- Search for quote by key word  
 - Read another quotes from the same author
 - Fully adaptive
-- axios (for requests to [this API](https://github.com/pprathameshmore/QuoteGarden))
 - Pagination for more than 10 quotes
 
 ## Todos
 
 - Search for quotes depending on genre/query/author
-- rebuild/delete all unnecessary element plus components

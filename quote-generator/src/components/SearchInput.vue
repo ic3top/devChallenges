@@ -1,12 +1,22 @@
 <template>
-  <form>
-    <input type="search" placeholder="Search">
+  <form @submit="searchRequest">
+    <input type="search" placeholder="Search" v-model="query">
   </form>
 </template>
 
 <script>
 export default {
   name: 'SearchButton',
+  data() {
+    return {
+      query: '',
+    };
+  },
+  methods: {
+    searchRequest() {
+      this.$router.push({ path: '/search', query: { query: this.query } });
+    },
+  },
 };
 </script>
 

@@ -23,6 +23,7 @@ export default {
 
 .quote {
   display: flex;
+  position: relative;
   align-items: center;
   min-height: 20vh;
   font-size: max(3.5vh, 1vw);
