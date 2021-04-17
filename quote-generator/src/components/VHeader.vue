@@ -1,10 +1,10 @@
 <template>
   <el-header>
-<!--    <search-button></search-button>-->
+    <search-button></search-button>
     <el-button type="info"
                :loading="getLoadingState"
                icon="el-icon-refresh"
-               @click="setRandomQuote">
+               @click="setRandomQuoteHandler">
       Roll
     </el-button>
   </el-header>
@@ -12,18 +12,25 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
-// import SearchButton from './SearchButton.vue';
+import SearchButton from './SearchInput.vue';
 
 export default {
   name: 'VHeader',
   components: {
-    // SearchButton,
+    SearchButton,
   },
   computed: {
     ...mapGetters(['getLoadingState']),
   },
   methods: {
     ...mapActions(['setRandomQuote']),
+    setRandomQuoteHandler() {
+      if (this.$route.path !== '/') {
+        this.$router.push({ path: '/' });
+        return;
+      }
+      this.setRandomQuote();
+    },
   },
 };
 </script>

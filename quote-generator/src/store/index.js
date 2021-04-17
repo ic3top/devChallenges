@@ -11,6 +11,8 @@ export default createStore({
     authorQuotes: [],
     totalAmountOfQuotes: 0,
     pagination: {},
+    searchResults: {},
+    currentQuery: '',
   },
   mutations: {
     setRandomQuote(state, quote) {
@@ -30,6 +32,12 @@ export default createStore({
     },
     setTotalAmountOfQuotes(state, amount) {
       state.totalAmountOfQuotes = amount;
+    },
+    setSearchResults(state, results) {
+      state.searchResults = results;
+    },
+    setCurrentQuery(state, query) {
+      state.currentQuery = query;
     },
   },
   actions: {
@@ -56,7 +64,7 @@ export default createStore({
       commit('setTotalAmountOfQuotes', authorQuotes.totalQuotes);
       commit('setLoadingState', false);
     },
-    async changePage({ commit, state }, page) {
+    async changePageAuthorQuotes({ commit, state }, page) {
       commit('setLoadingState', true);
       const authorQuotes = await quotes.get('quotes', {
         params: {
@@ -66,6 +74,31 @@ export default createStore({
       });
       commit('setPagination', authorQuotes.pagination);
       commit('setAuthorQuotes', authorQuotes.data);
+      commit('setLoadingState', false);
+    },
+    async getQuotesPerQuery({ commit }, query) {
+      commit('setLoadingState', true);
+      commit('setExpanded', false);
+      commit('setCurrentQuery', query);
+      const quotesResponse = await quotes.get('quotes', {
+        params: {
+          query,
+        },
+      });
+      commit('setPagination', quotesResponse.pagination);
+      commit('setSearchResults', quotesResponse);
+      commit('setLoadingState', false);
+    },
+    async changePageQueryQuotes({ commit, state }, page) {
+      commit('setLoadingState', true);
+      const quotesResponse = await quotes.get('quotes', {
+        params: {
+          query: state.currentQuery,
+          page,
+        },
+      });
+      commit('setPagination', quotesResponse.pagination);
+      commit('setSearchResults', quotesResponse);
       commit('setLoadingState', false);
     },
   },
@@ -87,6 +120,12 @@ export default createStore({
     },
     getTotalAmountOfQuotes(state) {
       return state.totalAmountOfQuotes;
+    },
+    getSearchResults(state) {
+      return state.searchResults;
+    },
+    getCurrentQuery(state) {
+      return state.currentQuery;
     },
   },
 });

@@ -20,7 +20,9 @@ export default {
 </script>
 
 <style scoped>
-
+.el-card {
+  margin-top: max(6vh, 2vw);
+}
 .quote {
   display: flex;
   position: relative;

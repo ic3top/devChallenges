@@ -1,25 +1,15 @@
 <template>
-  <div>
-    <el-container>
-      <v-header></v-header>
-      <expand-main></expand-main>
-      <v-footer></v-footer>
-    </el-container>
-  </div>
+  <expand-main></expand-main>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
-import VFooter from '@/components/VFooter.vue';
-import ExpandMain from '@/components/ExpandMain.vue';
-import VHeader from '@/components/VHeader.vue';
+import ExpandMain from './ExpandMain.vue';
 
 export default {
-  name: 'App',
+  name: 'Home',
   components: {
-    VHeader,
     ExpandMain,
-    VFooter,
   },
   mounted() {
     this.setRandomQuote();

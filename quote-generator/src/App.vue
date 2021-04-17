@@ -1,31 +1,20 @@
 <template>
-  <div>
     <el-container>
       <v-header></v-header>
-      <expand-main></expand-main>
+      <router-view></router-view>
       <v-footer></v-footer>
     </el-container>
-  </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
-import VFooter from './components/VFooter.vue';
-import ExpandMain from './components/ExpandMain.vue';
 import VHeader from './components/VHeader.vue';
+import VFooter from './components/VFooter.vue';
 
 export default {
   name: 'App',
   components: {
     VHeader,
-    ExpandMain,
     VFooter,
-  },
-  mounted() {
-    this.setRandomQuote();
-  },
-  methods: {
-    ...mapActions(['setRandomQuote']),
   },
 };
 </script>
@@ -52,12 +41,22 @@ body::-webkit-scrollbar {
   color: #2c3e50;
 }
 
-</style>
-
-<style scoped>
-.el-container {
-  min-height: 95vh;
-  justify-content: space-between;
-  margin-bottom: 5vh;
+.el-card {
+  position: relative;
+  font-size: max(2.5vh, 1vw);
+  margin-top: 1vh;
+  text-align: left;
 }
+
+.el-card::before {
+  height: 100%;
+  width: 4px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #F7DF94;
+  border-radius: 4px 0 0 4px;
+}
+
 </style>

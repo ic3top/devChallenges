@@ -31,10 +31,10 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import VQuote from '@/components/VQuote.vue';
 import VPagination from '@/components/VPagination.vue';
+import VQuote from './VQuote.vue';
 import ExpandButton from './ExpandButton.vue';
-import VCard from './VCard.vue';
+import VCard from '../../components/VCard.vue';
 
 export default {
   name: 'ExpandMain',
@@ -73,5 +73,9 @@ export default {
 
 .author {
   margin: 8vh auto 0;
+}
+
+.el-main {
+  margin-bottom: 3vh;
 }
 </style>

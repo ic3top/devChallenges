@@ -1,6 +1,6 @@
 <template>
-  <form @submit="searchRequest">
-    <input type="search" placeholder="Search" v-model="query">
+  <form @submit.prevent="searchRequest">
+    <input type="search" placeholder="Key word" v-model="query">
   </form>
 </template>
 
@@ -14,7 +14,8 @@ export default {
   },
   methods: {
     searchRequest() {
-      this.$router.push({ path: '/search', query: { query: this.query } });
+      this.$router.push({ name: 'Search', params: { query: this.query } });
+      this.query = '';
     },
   },
 };
@@ -40,7 +41,7 @@ input[type=search] {
   background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
   border: solid 1px #ccc;
   padding: 9px 10px 9px 32px;
-  width: 55px;
+  width: 70px;
 
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
