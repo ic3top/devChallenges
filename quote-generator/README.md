@@ -57,3 +57,5 @@ It`s a random quote generator app. During this project I learn lots of new about
 ## Todos
 
 - Search for quotes depending on genre/query/author
+- Improve validation
+- Fix search icon
