@@ -6,11 +6,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://ic3top.github.io/devChallenges/quote-generator/dist/index.html">
+    <a href="https://ic3top.github.io/devChallenges/quote-generator/dist/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY">
+    <a href="https://devchallenges.io/solutions/8j9M8dewSXsqQcga9e7r">
       Solution
     </a>
     <span> | </span>
