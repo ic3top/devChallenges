@@ -27,6 +27,6 @@ Head over to [DevChallenges](https://devchallenges.io/) website and select a pro
 
 #### Front-end Developer path
 > Vue framework was used.
-* [Button-component](https://ic3top.github.io/devChallenges/button-component/dist/index.html)
+* [Button-component](https://ic3top.github.io/devChallenges/button-component/dist/)
 * [Todo-app](https://ic3top.github.io/devChallenges/todo-app/dist/)
 * [Random quote app](https://ic3top.github.io/devChallenges/quote-generator/dist/)
