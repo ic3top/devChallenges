@@ -1,18 +1,18 @@
 <template>
   <h1>Buttons</h1>
   <ButtonList></ButtonList>
-  <Footer></Footer>
+  <TheFooter></TheFooter>
 </template>
 
 <script>
 import ButtonList from "./components/ButtonList";
-import Footer from "./components/Footer";
+import TheFooter from "./components/TheFooter";
 
 export default {
   name: 'App',
   components: {
     ButtonList,
-    Footer
+    TheFooter
   }
 }
 </script>

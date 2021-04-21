@@ -3,12 +3,10 @@
           :disabled="disabled"
           @click="onClick">
     <font-awesome-icon
-    :icon="['fas', `${startIcon}`]"
-    v-if="startIcon"/>
-    {{ text }}
+    :icon="['fas', `${startIcon}`]"/>
+    <slot></slot>
     <font-awesome-icon
-        :icon="endIcon"
-        v-if="endIcon"/>
+        :icon="endIcon"/>
   </button>
 </template>
 
@@ -38,10 +36,6 @@ export default {
     },
     endIcon: {
       type: String
-    },
-    text: {
-      type: String,
-      default: () => ''
     }
   },
   emits: ['click'],
