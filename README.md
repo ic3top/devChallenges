@@ -29,4 +29,5 @@ Head over to [DevChallenges](https://devchallenges.io/) website and select a pro
 > Vue framework was used.
 * [Button-component](https://ic3top.github.io/devChallenges/button-component/dist/)
 * [Todo-app](https://ic3top.github.io/devChallenges/todo-app/dist/)
-* [Random quote app](https://ic3top.github.io/devChallenges/quote-generator/dist/)
+* [Random quote](https://ic3top.github.io/devChallenges/quote-generator/dist/)
+* [Country quiz](https://ic3top.github.io/devChallenges/country-quiz-app/dist/)
