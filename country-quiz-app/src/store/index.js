@@ -10,11 +10,9 @@ export default createStore({
     amountOfQuestions: 8,
     fourRandomCountries: {},
     allCountries: {},
+    rightAnswer: {},
   },
   mutations: {
-    setQuizData(state, dataForQuiz) {
-      state.quizData = dataForQuiz;
-    },
     increaseResult(state) {
       state.result += 1;
     },
@@ -30,8 +28,6 @@ export default createStore({
     },
     setFourRandomCountries(state) {
       const lt = ['A', 'B', 'C', 'D'];
-      // TODO:
-      // eslint-disable-next-line no-plusplus
       for (let i = 0; i < 4; i++) {
         state.fourRandomCountries[lt[i]] = state
           .allCountries[Math.floor(Math.random() * (250 - 1)) + 1];
@@ -48,6 +44,9 @@ export default createStore({
   getters: {
     getRightAnswer(state) {
       return state.rightAnswer;
+    },
+    isLoading(state) {
+      return state.loadingState;
     },
   },
 });

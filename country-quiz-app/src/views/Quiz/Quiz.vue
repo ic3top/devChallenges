@@ -17,15 +17,17 @@ export default {
     QuizCard,
   },
   methods: {
-    ...mapMutations(['setAllCountries', 'setFourRandomCountries', 'newGame']),
+    ...mapMutations(['setAllCountries', 'setFourRandomCountries', 'newGame', 'setLoadingState']),
   },
   mounted() {
+    this.setLoadingState(true);
     this.newGame();
     fetch('https://restcountries.eu/rest/v2/all?fields=name;capital;alpha3Code;flag;')
       .then((response) => response.json())
       .then((data) => {
         this.setAllCountries(data);
         this.setFourRandomCountries();
+        this.setLoadingState(false);
       });
   },
 };
@@ -33,10 +35,11 @@ export default {
 
 <style scoped>
 .container {
-  min-height: calc(100vh - 30px);
+  min-height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .title {
@@ -45,5 +48,18 @@ export default {
   color: #F2F2F2;
   text-transform: uppercase;
   margin: 40px 0 0;
+}
+
+@media screen and (max-width: 576px)  {
+  .container {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-height: 1600px) {
+  .title {
+    margin-top: 15px;
+    font-size: 28px;
+  }
 }
 </style>

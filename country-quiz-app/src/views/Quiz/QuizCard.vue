@@ -1,18 +1,23 @@
 <template>
   <div class="card">
-        <h3
-          v-if="pattern.includes('capital')"
-          class="question">
-          {{ getRightAnswer?.capital }} is the capital of:
-        </h3>
-        <div v-else class="flag-question">
-          <img class="flag"
-               :src="getRightAnswer?.flag"
-               alt="Flag of some country"
-          >
-          <h3 class="question">Which country does this flag belong to?  </h3>
-        </div>
-        <quiz-answers />
+    <div v-if="isLoading">
+      <img src="../../assets/loader.svg" alt="Loader">
+    </div>
+    <template v-else>
+      <h3
+        v-if="pattern.includes('capital')"
+        class="question">
+        {{ getRightAnswer?.capital }} is the capital of:
+      </h3>
+      <div v-else class="flag-question">
+        <img class="flag"
+             :src="getRightAnswer?.flag"
+             alt="Flag of some country"
+        >
+        <h3 class="question">Which country does this flag belong to?  </h3>
+      </div>
+      <quiz-answers />
+    </template>
   </div>
 </template>
 
@@ -32,7 +37,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['getRightAnswer']),
+    ...mapGetters(['getRightAnswer', 'isLoading']),
   },
 };
 </script>
@@ -40,6 +45,7 @@ export default {
 <style scoped>
 .card {
   position: relative;
+  text-align: left;
   width: 465px;
   margin-top: 20px;
   padding: 68px 32px 32px;
@@ -56,7 +62,7 @@ export default {
   height: 116px;
   width: 162px;
   right: 0;
-  top: -15%;
+  top: -10%;
 }
 
 .question {
@@ -72,5 +78,25 @@ export default {
 .flag {
   height: 80px;
   margin-bottom: 3vh;
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: auto;
+    padding: 35px 22px 22px;
+  }
+
+  .card::after {
+    height: 58px;
+    width: 81px;
+    top: -26px;
+    right: 5px;
+  }
+
+  .question {
+    color: #2F527B;
+    font-weight: 700;
+    font-size: 20px;
+  }
 }
 </style>

@@ -12,6 +12,7 @@ export default {
 
 <style scoped>
 .footer {
+  margin-top: 30px;
   line-height: 30px;
   text-align: center;
   background: rgb(82,86,161);

@@ -29,7 +29,7 @@ export default {
 <style scoped>
 .container {
   width: 90%;
-  min-height: calc(100vh - 30px);
+  min-height: calc(100vh - 60px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;

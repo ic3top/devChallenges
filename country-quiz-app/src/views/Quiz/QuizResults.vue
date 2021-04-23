@@ -49,13 +49,15 @@ export default {
 
 <style scoped>
 .container {
-  min-height: calc(100vh - 30px);
+  min-height: calc(100vh - 60px);
+  margin: 0 auto;
   display: flex;
   align-items: center;
 }
+
 .card {
   position: relative;
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
   width: 465px;
   padding: 68px 32px 32px;
   background-color: #F2F2F2;
@@ -82,7 +84,6 @@ export default {
 .restart-btn {
   box-sizing: border-box;
   padding: 18px 60px;
-  margin: 0 10px;
   border: 2px solid #1D355D;
   border-radius: 12px;
   transition: all .2s ease-in-out;
@@ -101,5 +102,24 @@ export default {
 
 .links {
   margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 576px){
+  .container {
+    max-width: 300px;
+  }
+
+  .links {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .restart-btn {
+    margin-top: 20px;
+  }
 }
 </style>

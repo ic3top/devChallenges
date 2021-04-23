@@ -138,8 +138,9 @@ export default {
 }
 
 .next-btn {
+  display: block;
   padding: 15px 36px;
-  margin-top: 5vh;
+  margin: 5vh auto 0 auto;
   border-radius: 12px;
   border: none;
   background-color: #F9A826;
@@ -147,5 +148,34 @@ export default {
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .answer-btn {
+    padding: 10px 25px 10px 10px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .incorrect::after, .correct::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .answer-btn:hover {
+    background: #FFFFFF;
+    border: 2px solid rgba(96, 102, 208, 0.7);
+    color: rgba(96, 102, 208, 0.8);
+  }
+
+  .incorrect:hover {
+    color: #FFF;
+    background-color: #EA8282;
+  }
+
+  .correct:hover {
+    color: #FFF;
+    background-color: #60BF88;
+  }
 }
 </style>
