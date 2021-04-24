@@ -36,6 +36,9 @@
 Here is a quiz app with two quiz variants which you can choose on the home page. In the first you should choose the right country depending on capital, when in the second depending on a certain flag. 
 Try doing your best and answer all the questions right. You will see final results in the end.
 
+![quiz illustration](./screenshots/country_demo.png)
+![quiz illustration with flag](./screenshots/flag_demo.png)
+
 - View the [live demo](https://ic3top.github.io/devChallenges/todo-app/dist/)
 - 4th Front-end Challenges project
 
@@ -52,6 +55,6 @@ Try doing your best and answer all the questions right. You will see final resul
 - See the correct answer  
 - Total results in the end
 
-## Todos
+### Todos
 
 - Add possibility to choose number of question
