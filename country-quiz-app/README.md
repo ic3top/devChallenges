@@ -39,7 +39,7 @@ Try doing your best and answer all the questions right. You will see final resul
 ![quiz illustration](./screenshots/country_demo.png)
 ![quiz illustration with flag](./screenshots/flag_demo.png)
 
-- View the [live demo](https://ic3top.github.io/devChallenges/todo-app/dist/)
+- View the [live demo](https://ic3top.github.io/devChallenges/country-quiz-app/dist/)
 - 4th Front-end Challenges project
 
 ### Built With
@@ -51,10 +51,7 @@ Try doing your best and answer all the questions right. You will see final resul
 ## Features
 
 - Two quiz variants
-- 8 random questions
-- See the correct answer  
+- 8 random questions, each has 4 possible answers
+- See the correct answer(s)  
 - Total results in the end
 
-### Todos
-
-- Add possibility to choose number of question
