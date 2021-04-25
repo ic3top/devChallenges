@@ -28,7 +28,6 @@
     - [Built With](#built-with)
 - [Features](#features)
 - [Inspiration](#inspiration)
-- [Todos](#Todos)
 
 <!-- OVERVIEW -->
 
@@ -51,7 +50,7 @@ Try doing your best and answer all the questions right. You will see final resul
 ## Features
 
 - Two quiz variants
-- 8 random questions, each has 4 possible answers
-- See the correct answer(s)  
+- 8(by default) random questions, each has 4 possible variants
+- Select the amount of question for the quiz
+- See the correct answer(s)
 - Total results in the end
-
