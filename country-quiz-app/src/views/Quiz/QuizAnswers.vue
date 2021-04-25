@@ -1,6 +1,6 @@
 <template>
   <ul class="answers">
-    <li v-for="(countryObj, index) in answer"
+    <li v-for="(countryObj, index) in answers"
         :key="index"
         class="answer-item">
       <button
@@ -37,8 +37,9 @@ export default {
   computed: {
     ...mapGetters(['getRightAnswer']),
     ...mapState({
-      answer: (state) => state.fourRandomCountries,
+      answers: (state) => state.fourRandomCountries,
       currentQuestion: (state) => state.currentQuestion,
+      amountOfQuestions: (state) => state.amountOfQuestions,
     }),
   },
   methods: {
@@ -57,7 +58,7 @@ export default {
   },
   watch: {
     currentQuestion() {
-      if (this.currentQuestion > 8) {
+      if (this.currentQuestion > this.amountOfQuestions) {
         router.push({ path: '/quiz/results' });
       }
     },

@@ -16,13 +16,45 @@
         Flag - country quiz
       </router-link>
     </nav>
+    <div class="select-wrapper">
+      <label for="amountOfQuestions">Number of questions: </label>
+      <select
+        class="select"
+        name="amountOfQuestions"
+        id="amountOfQuestions"
+        v-model="amount">
+        <option value="4">4</option>
+        <option value="8" selected>8</option>
+        <option value="12">12</option>
+        <option value="16">16</option>
+        <option value="25">25</option>
+      </select>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex';
+
 export default {
   name: 'Home',
-  components: {},
+  methods: {
+    ...mapMutations(['setAmountOfQuestions']),
+  },
+  computed: {
+    ...mapGetters(['getAmountOfQuestions']),
+    amount: {
+      get() {
+        return this.getAmountOfQuestions;
+      },
+      set(value) {
+        this.setAmountOfQuestions(value);
+      },
+    },
+  },
+  mounted() {
+
+  },
 };
 </script>
 
@@ -59,7 +91,22 @@ export default {
 .navigation-button:hover {
   background: #F9A826;
 }
+
 .navigation-button:last-child {
   margin-top: 3vh;
+}
+
+.select-wrapper {
+  margin-top: 5vh;
+}
+
+.select {
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.select:hover {
+  background: lightcyan;
 }
 </style>

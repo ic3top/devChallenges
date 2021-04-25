@@ -40,6 +40,9 @@ export default createStore({
     setRightAnswer(state) {
       state.rightAnswer = state.fourRandomCountries[randLetter()];
     },
+    setAmountOfQuestions(state, amount) {
+      state.amountOfQuestions = Number(amount);
+    },
   },
   getters: {
     getRightAnswer(state) {
@@ -47,6 +50,9 @@ export default createStore({
     },
     isLoading(state) {
       return state.loadingState;
+    },
+    getAmountOfQuestions(state) {
+      return state.amountOfQuestions;
     },
   },
 });
