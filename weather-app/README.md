@@ -1,24 +1,10 @@
 # weather-app
+> Look at the [Demo page.](https://ic3top.github.io/devChallenges/weather-app/dist/)
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## TODOs
+* Make skeleton for loading
+* Implement search for places
+* Autocomplete
+* Request current location on click
+* Convert temperature in Celcius to Fahrenheit and vice versa
+* Make app fully adaptive
