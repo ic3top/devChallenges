@@ -6,7 +6,7 @@
           Wind status
         </template>
         <template v-slot:main>
-          <Skeleton height="5rem"/>
+          <Skeleton height="5rem" class="p-mt-3"/>
         </template>
         <template v-slot:footer>
           <div class="p-text-light p-d-flex p-align-center p-justify-center"
@@ -15,7 +15,7 @@
               <span class="pi pi-chevron-circle-down p-mr-2"
                     style="font-size: 1.8rem; color: var(--primary-color)"
               ></span>
-            <Skeleton width="4rem"/>
+            <Skeleton width="4rem" class="p-mt-3"/>
           </div>
         </template>
       </right-highlight-card>
@@ -26,7 +26,7 @@
           Humidity
         </template>
         <template v-slot:main>
-          <Skeleton height="5rem"/>
+          <Skeleton height="5rem" class="p-mt-3"/>
         </template>
         <template v-slot:footer>
           <progress-bar mode="indeterminate"></progress-bar>

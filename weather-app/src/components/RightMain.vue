@@ -1,5 +1,5 @@
 <template>
-  <div class="p-mr-5" style="margin-left: 7vw">
+  <div class="p-col p-mr-5 p-ml-md-2 p-ml-lg-5">
     <right-next-day-cards v-if="!isLoading" />
     <skeleton-next-day-cards v-else />
     <h2 class="p-mt-5" style="font-size: 2rem">Today`s Highlights</h2>
@@ -29,7 +29,3 @@ export default {
   methods: {},
 };
 </script>
-
-<style scoped>
-
-</style>

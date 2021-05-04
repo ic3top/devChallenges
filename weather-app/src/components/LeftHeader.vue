@@ -7,18 +7,28 @@
     />
     <Button class="p-button-rounded p-button-outlined"
             icon="pi pi-map-marker"
+            :class="{ 'p-disabled': getLocationPermission === 'denied' }"
             @click="$emit('detectLocation')"
+            v-tooltip="'Go to default location'"
     />
   </div>
 </template>
 
 <script>
 import Button from 'primevue/button';
+import Tooltip from 'primevue/tooltip';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'LeftHeader',
   components: {
     Button,
+  },
+  computed: {
+    ...mapGetters(['getLocationPermission']),
+  },
+  directives: {
+    tooltip: Tooltip,
   },
 };
 </script>

@@ -1,12 +1,12 @@
 import { createStore } from 'vuex';
 
-const geo = navigator.geolocation;
-
 export default createStore({
   state: {
     weatherData: {},
     weatherImages: {},
     loading: false,
+    locationPermission: false,
+    currentLocation: null,
   },
   getters: {
     getWeatherData({ weatherData }) {
@@ -56,6 +56,12 @@ export default createStore({
     isLoading({ loading }) {
       return loading;
     },
+    getLocationPermission({ locationPermission }) {
+      return locationPermission;
+    },
+    getCurrentLocation({ currentLocation }) {
+      return currentLocation;
+    },
   },
   mutations: {
     setWeatherData(state, weatherData) {
@@ -67,12 +73,20 @@ export default createStore({
     setLoadingState(state, bool) {
       state.loading = bool;
     },
+    setLocationPermission(state, bool) {
+      state.locationPermission = bool;
+    },
+    setCurrentLocation(state, location) {
+      state.currentLocation = location;
+    },
   },
   actions: {
-    async fetchPerWoeid({ commit, dispatch }, id = (924938)) {
+    // 924938 - Kiev
+    async fetchPerWoeid({ commit, dispatch }, id = (44418)) {
       const res = await fetch(`https://aqueous-escarpment-53635.herokuapp.com/https://www.metaweather.com/api/location/${id}/`);
       const data = await res.json();
       commit('setWeatherData', data);
+      commit('setCurrentLocation', data.title);
       data.consolidated_weather.forEach((day) => {
         dispatch('fetchImage', day.weather_state_abbr);
       });
@@ -95,10 +109,16 @@ export default createStore({
 
     detectLocation({ dispatch, commit }) {
       commit('setLoadingState', true);
-      geo.getCurrentPosition(
+      navigator.geolocation.getCurrentPosition(
         ({ coords }) => dispatch('fetchPerCoords', coords),
         () => dispatch('fetchPerWoeid'),
       );
+    },
+
+    handlePermission({ commit }) {
+      navigator.permissions.query({ name: 'geolocation' }).then((result) => {
+        commit('setLocationPermission', result.state);
+      });
     },
   },
 });
