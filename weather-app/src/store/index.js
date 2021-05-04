@@ -97,9 +97,7 @@ export default createStore({
       commit('setLoadingState', true);
       geo.getCurrentPosition(
         ({ coords }) => dispatch('fetchPerCoords', coords),
-        () => dispatch('fetchPerWoeid'), {
-          enableHighAccuracy: true,
-        },
+        () => dispatch('fetchPerWoeid'),
       );
     },
   },
