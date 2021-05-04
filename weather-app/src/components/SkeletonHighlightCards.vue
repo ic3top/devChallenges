@@ -1,6 +1,6 @@
 <template>
   <div class="p-grid p-mt-3">
-    <div class="p-col-6">
+    <div class="p-sm-6 p-col-12">
       <right-highlight-card>
         <template v-slot:title>
           Wind status
@@ -20,7 +20,7 @@
         </template>
       </right-highlight-card>
     </div>
-    <div class="p-col-6">
+    <div class="p-sm-6 p-col-12">
       <right-highlight-card>
         <template v-slot:title>
           Humidity
@@ -33,7 +33,7 @@
         </template>
       </right-highlight-card>
     </div>
-    <div class="p-col-6">
+    <div class="p-sm-6 p-col-12">
       <right-highlight-card>
         <template v-slot:title>
           Visibility
@@ -43,7 +43,7 @@
         </template>
       </right-highlight-card>
     </div>
-    <div class="p-col-6">
+    <div class="p-sm-6 p-col-12">
       <right-highlight-card>
         <template v-slot:title>
           Air pressure

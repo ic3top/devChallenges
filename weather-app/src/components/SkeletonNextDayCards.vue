@@ -2,7 +2,7 @@
   <div class="p-pt-5 p-grid p-jc-center">
     <Card v-for="(index) of 5"
           :key="index"
-          class="p-xl-2 p-mx-3 p-px-2 p- p-mt-md-4"
+          class="p-xl-2 p-mx-3 p-px-2 p-mt-4"
           style="min-width: 180px;"
     >
       <template #title>

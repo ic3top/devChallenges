@@ -1,8 +1,8 @@
 <template>
-  <div class="p-pt-5 p-grid p-jc-center">
+  <div class="p-grid p-jc-center">
     <Card v-for="(day, index) of getNextDays"
           :key="day.id || index"
-          class="p-xl-2 p-mx-3 p-px-2 p-mt-md-4"
+          class="p-xl-2 p-mx-3 p-px-2 p-mt-4"
           style="min-width: 180px;"
     >
       <template #title>
@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style scoped>
->>> svg {
+:deep(svg) {
   max-height: 100px;
 }
 </style>

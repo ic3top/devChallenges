@@ -1,7 +1,7 @@
 <template>
   <div class="p-grid p-reset">
     <left-main />
-    <div class="p-xl-3 p-lg-4 p-md-5"></div>
+    <div class="p-xl-3 p-lg-4 p-sm-5 p-col-12"></div>
     <right-main />
   </div>
 

@@ -1,6 +1,5 @@
 <template>
-  <div class="p-xl-3 p-lg-4 p-md-5 p-card p-d-flex p-flex-column p-justify-between"
-       style="height: 100vh; position: fixed"
+  <div class="p-xl-3 p-lg-4 p-sm-5 p-col-12 p-card p-d-flex p-flex-column p-justify-between fixed"
   >
     <template v-if="!isLoading">
       <left-header @detectLocation="detectLocation" @search="searchVisible = true" />
@@ -67,7 +66,7 @@ export default {
 </script>
 
 <style scoped>
->>> svg {
+:deep(svg) {
   max-width: 50%;
 }
 
@@ -80,5 +79,16 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+.fixed {
+  min-height: 100vh;
+  position: fixed;
+}
+
+@media screen and (max-width: 576px) {
+  .fixed {
+    position: unset;
+  }
 }
 </style>
