@@ -17,14 +17,41 @@ export default createStore({
     },
     getFirstDay({ weatherData, weatherImages }) {
       if (!weatherData.consolidated_weather) return {};
+      const [firstDayObj] = weatherData.consolidated_weather;
       const firstDay = {
-        image: weatherImages[weatherData.consolidated_weather['0'].weather_state_abbr],
+        image: weatherImages[firstDayObj.weather_state_abbr],
         location: weatherData.title,
         time: weatherData.time,
-        weatherName: weatherData.consolidated_weather['0'].weather_state_name,
-        temp: weatherData.consolidated_weather['0'].the_temp,
+        weatherName: firstDayObj.weather_state_name,
+        temp: firstDayObj.the_temp,
+        humidity: firstDayObj.humidity,
+        wind: {
+          direction: firstDayObj.wind_direction,
+          directionCompass: firstDayObj.wind_direction_compass,
+          speed: firstDayObj.wind_speed,
+        },
+        visibility: firstDayObj.visibility,
+        airPressure: firstDayObj.air_pressure,
       };
       return firstDay;
+    },
+    getNextDays({ weatherData, weatherImages }) {
+      if (!weatherData.consolidated_weather) return {};
+      const nextDays = [];
+      weatherData.consolidated_weather.forEach((day) => {
+        const image = weatherImages[day.weather_state_abbr];
+        nextDays.push({
+          weather: {
+            maxTemp: day.max_temp,
+            minTemp: day.min_temp,
+            date: day.applicable_date,
+            id: day.id,
+          },
+          image,
+        });
+      });
+      nextDays.shift();
+      return nextDays;
     },
     isLoading({ loading }) {
       return loading;
@@ -37,8 +64,8 @@ export default createStore({
     addWeatherImage(state, { abbr, image }) {
       state.weatherImages[abbr] = image;
     },
-    toggleLoadingState(state) {
-      state.loading = !state.loading;
+    setLoadingState(state, bool) {
+      state.loading = bool;
     },
   },
   actions: {
@@ -49,7 +76,7 @@ export default createStore({
       data.consolidated_weather.forEach((day) => {
         dispatch('fetchImage', day.weather_state_abbr);
       });
-      commit('toggleLoadingState');
+      commit('setLoadingState', false);
       return data;
     },
 
@@ -67,7 +94,7 @@ export default createStore({
     },
 
     detectLocation({ dispatch, commit }) {
-      commit('toggleLoadingState');
+      commit('setLoadingState', true);
       geo.getCurrentPosition(
         ({ coords }) => dispatch('fetchPerCoords', coords),
         () => dispatch('fetchPerWoeid'), {
