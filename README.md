@@ -31,3 +31,4 @@ Head over to [DevChallenges](https://devchallenges.io/) website and select a pro
 * [Todo-app](https://ic3top.github.io/devChallenges/todo-app/dist/)
 * [Random quote](https://ic3top.github.io/devChallenges/quote-generator/dist/)
 * [Country quiz](https://ic3top.github.io/devChallenges/country-quiz-app/dist/)
+* [Weather-app](https://ic3top.github.io/devChallenges/weather-app/dist/)
