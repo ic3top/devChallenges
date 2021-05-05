@@ -120,5 +120,10 @@ export default createStore({
         commit('setLocationPermission', result.state);
       });
     },
+
+    async setDataPerQuery({ commit, dispatch }, { woeid }) {
+      commit('setLoadingState', true);
+      dispatch('fetchPerWoeid', woeid);
+    },
   },
 });

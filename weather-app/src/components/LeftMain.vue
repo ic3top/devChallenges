@@ -15,7 +15,7 @@
         {{ getFirstDay.weatherName }}
       </h1>
 
-      <div style="color: var(--text-color-secondary); font-size: 14px">
+      <div class="p-mt-5" style="color: var(--text-color-secondary); font-size: 14px">
         <div class="p-d-flex p-align-center p-justify-center p-pl-4">
           <p>Today<span class="p-px-2">|</span>{{ formatDate(getFirstDay.time) }}</p>
         </div>
@@ -30,8 +30,17 @@
       <img src="../assets/Radio-1s-237px.svg" class="p-mt-auto p-mr-auto" alt="loading">
     </template>
 
-    <Sidebar v-model:visible="searchVisible" position="left" class="p-sidebar-md">
-      <h2>Search stuff will be soon...</h2>
+    <footer class="p-text-center" style="font-size: 12px; color: var(--text-color-secondary);">
+      Written by <a href="https://github.com/ic3top"
+                    style="letter-spacing: 1.2px;"
+                    target="_blank"
+      >
+        @ic3top
+      </a>
+    </footer>
+
+    <Sidebar v-model:visible="searchVisible" position="left" class="p-sidebar-sm">
+      <sidebar-content @closeSidebar="searchVisible = false" />
     </Sidebar>
   </div>
 </template>
@@ -42,6 +51,7 @@ import Sidebar from 'primevue/sidebar';
 import roundNumber from '@/utils/roundNumber';
 import formatDate from '@/utils/formatDate';
 import LeftHeader from './LeftHeader.vue';
+import SidebarContent from './SidebarContent.vue';
 
 export default {
   name: 'LeftMain',
@@ -53,6 +63,7 @@ export default {
   components: {
     LeftHeader,
     Sidebar,
+    SidebarContent,
   },
   computed: {
     ...mapGetters(['isLoading', 'getFirstDay']),
