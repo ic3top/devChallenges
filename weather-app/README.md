@@ -13,7 +13,7 @@ Take a look at the [Demo page.](https://ic3top.github.io/devChallenges/weather-a
 * See some highlights for today
 * Request current location weather
 * Fully adaptive
+* Convert temperature in Celcius to Fahrenheit and vice versa
 
 ## TODOs
-* Convert temperature in Celcius to Fahrenheit and vice versa
 * Complete readme))
