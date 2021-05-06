@@ -1,4 +1,5 @@
 import { createStore } from 'vuex';
+import { fToC, cToF } from '../utils/degreesMeasure';
 
 export default createStore({
   state: {
@@ -6,7 +7,7 @@ export default createStore({
     weatherImages: {},
     loading: false,
     locationPermission: false,
-    currentLocation: null,
+    currentDegrees: 'C',
   },
   getters: {
     getWeatherData({ weatherData }) {
@@ -59,8 +60,8 @@ export default createStore({
     getLocationPermission({ locationPermission }) {
       return locationPermission;
     },
-    getCurrentLocation({ currentLocation }) {
-      return currentLocation;
+    getCurrentDegrees({ currentDegrees }) {
+      return currentDegrees;
     },
   },
   mutations: {
@@ -76,17 +77,37 @@ export default createStore({
     setLocationPermission(state, bool) {
       state.locationPermission = bool;
     },
-    setCurrentLocation(state, location) {
-      state.currentLocation = location;
+    setCurrentDegrees(state, measure) {
+      state.currentDegrees = measure;
+    },
+    setNewDegrees(state) {
+      state.weatherData.consolidated_weather.map((day) => {
+        if (state.currentDegrees === 'C') {
+          // eslint-disable-next-line no-param-reassign
+          day.the_temp = cToF(day.the_temp);
+          // eslint-disable-next-line no-param-reassign
+          day.max_temp = cToF(day.max_temp);
+          // eslint-disable-next-line no-param-reassign
+          day.min_temp = cToF(day.min_temp);
+        } else {
+          // eslint-disable-next-line no-param-reassign
+          day.the_temp = fToC(day.the_temp);
+          // eslint-disable-next-line no-param-reassign
+          day.max_temp = fToC(day.max_temp);
+          // eslint-disable-next-line no-param-reassign
+          day.min_temp = fToC(day.min_temp);
+        }
+        return day;
+      });
+      state.currentDegrees = state.currentDegrees === 'F' ? 'C' : 'F';
     },
   },
   actions: {
     // 924938 - Kiev
-    async fetchPerWoeid({ commit, dispatch }, id = (44418)) {
+    async fetchPerWoeid({ commit, dispatch }, id = (924938)) {
       const res = await fetch(`https://aqueous-escarpment-53635.herokuapp.com/https://www.metaweather.com/api/location/${id}/`);
       const data = await res.json();
       commit('setWeatherData', data);
-      commit('setCurrentLocation', data.title);
       data.consolidated_weather.forEach((day) => {
         dispatch('fetchImage', day.weather_state_abbr);
       });
@@ -113,6 +134,7 @@ export default createStore({
         ({ coords }) => dispatch('fetchPerCoords', coords),
         () => dispatch('fetchPerWoeid'),
       );
+      commit('setCurrentDegrees', 'C');
     },
 
     handlePermission({ commit }) {
@@ -124,6 +146,7 @@ export default createStore({
     async setDataPerQuery({ commit, dispatch }, { woeid }) {
       commit('setLoadingState', true);
       dispatch('fetchPerWoeid', woeid);
+      commit('setCurrentDegrees', 'C');
     },
   },
 });

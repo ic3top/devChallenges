@@ -8,7 +8,11 @@
 
       <div class="p-d-flex p-align-end p-justify-center p-my-4 p-text-uppercase p-text-italic">
         <h2 style="font-size: 6rem">{{ roundNumber(getFirstDay.temp) }}</h2>
-        <span style="color:var(--text-color-secondary); font-size: 2rem">℃</span>
+        <span style="color:var(--text-color-secondary);
+        font-size: 2rem"
+        >
+          °{{ getCurrentDegrees }}
+        </span>
       </div>
 
       <h1 class="p-text-center p-text-italic p-text-light" style="font-size: 3rem;">
@@ -66,7 +70,7 @@ export default {
     SidebarContent,
   },
   computed: {
-    ...mapGetters(['isLoading', 'getFirstDay']),
+    ...mapGetters(['isLoading', 'getFirstDay', 'getCurrentDegrees']),
   },
   methods: {
     ...mapActions(['detectLocation']),

@@ -22,12 +22,12 @@
           <p>
             <span style="font-size: 1.5rem">
               {{ roundNumber(day.weather.maxTemp) }}
-            </span> ℃
+            </span> °{{ getCurrentDegrees }}
           </p>
           <p class="p-text-secondary">
             <span style="font-size: 1.2rem">
               {{ roundNumber(day.weather.minTemp) }}
-            </span> ℃
+            </span> °{{ getCurrentDegrees }}
           </p>
         </div>
       </template>
@@ -47,7 +47,7 @@ export default {
     Card,
   },
   computed: {
-    ...mapGetters(['getNextDays']),
+    ...mapGetters(['getNextDays', 'getCurrentDegrees']),
   },
   methods: {
     roundNumber,

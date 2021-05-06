@@ -4,19 +4,21 @@
     <div class="p-xl-3 p-lg-4 p-sm-5 p-col-12"></div>
     <right-main />
   </div>
-
+  <degrees-buttons />
 </template>
 
 <script>
 import { mapActions } from 'vuex';
 import RightMain from './components/RightMain.vue';
 import LeftMain from './components/LeftMain.vue';
+import DegreesButtons from './components/DegreesButtons.vue';
 
 export default {
   name: 'App',
   components: {
     LeftMain,
     RightMain,
+    DegreesButtons,
   },
   created() {
     this.handlePermission();
