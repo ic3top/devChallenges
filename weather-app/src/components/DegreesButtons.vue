@@ -5,14 +5,15 @@
             class="p-button-rounded"
             @click="setNewDegrees"
     >
-      <img src="../assets/celsius.svg" alt="celsius" class="w-20">
+      <img v-if="!isLoading" src="../assets/celsius.svg" alt="celsius" class="w-20">
+      <i v-else class="pi pi-spin pi-spinner"></i>
     </Button>
     <Button v-else
-            :loading="isLoading"
             class="p-button-rounded"
             @click="setNewDegrees"
     >
-      <img src="../assets/fahrenheit.svg" alt="fahrenheit" class="w-20">
+      <img v-if="!isLoading" src="../assets/fahrenheit.svg" alt="fahrenheit" class="w-20">
+      <i v-else class="pi pi-spin pi-spinner"></i>
     </Button>
   </div>
 </template>
