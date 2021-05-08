@@ -1,5 +1,5 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 export default function formatDate(date) {
-  return moment(date).format('ddd, D MMM');
+  return dayjs(date).format('ddd, D MMM');
 }
