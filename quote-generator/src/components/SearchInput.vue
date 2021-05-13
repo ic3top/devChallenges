@@ -1,6 +1,16 @@
 <template>
-  <form @submit.prevent="searchRequest">
-    <input type="search" placeholder="Key word" v-model="query">
+  <form @submit.prevent="searchRequest" class="form">
+    <label for="search-input" class="label-error" v-show="!valid">At least 3 characters...</label>
+    <input type="search"
+           class="search-input"
+           id="search-input"
+           name="search-input"
+           placeholder="Key word"
+           v-model="query"
+           @input="valid = true"
+           @focusout="valid = true"
+           autocomplete="off"
+    >
   </form>
 </template>
 
@@ -10,10 +20,15 @@ export default {
   data() {
     return {
       query: '',
+      valid: true,
     };
   },
   methods: {
     searchRequest() {
+      if (this.query.length < 3) {
+        this.valid = false;
+        return;
+      }
       this.$router.push({ name: 'Search', params: { query: this.query } });
       this.query = '';
     },
@@ -22,23 +37,27 @@ export default {
 </script>
 
 <style scoped>
+.form {
+  position: relative;
+}
 
-input {
+.search-input {
   outline: none;
 }
-input[type=search] {
+.search-input {
   -webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
   font-family: inherit;
   font-size: 100%;
 }
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button {
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button {
   display: none;
 }
 
-input[type=search] {
-  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+.search-input {
+  background: #ededed url(../assets/magnifier.png) no-repeat 7px center;
+  background-size: 20px;
   border: solid 1px #ccc;
   padding: 9px 10px 9px 32px;
   width: 70px;
@@ -51,17 +70,22 @@ input[type=search] {
   -moz-transition: all .5s;
   transition: all .5s;
 }
-input[type=search]:focus {
+.search-input:focus {
   width: 130px;
   background-color: #fff;
   border-color: #F7DF94;
   box-shadow: 0 0 5px #F7DF94;
 }
 
-input:-moz-placeholder {
+.search-input:-moz-placeholder {
   color: #999;
 }
-input::-webkit-input-placeholder {
+.search-input::-webkit-input-placeholder {
   color: #999;
+}
+.label-error {
+  position: absolute;
+  bottom: -40px;
+  color: rgba(255, 55, 55, .6);
 }
 </style>
