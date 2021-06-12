@@ -6,23 +6,25 @@ const contact = document.querySelector('#contact')
 const aboutContent = document.querySelector('#about-content')
 const contactContent = document.querySelector('#contact-content')
 
-let aboutBox
-let contactBox
-let width = window.innerWidth > 400 ? '400px' : '100%'
+function countWidth() {
+  return window.innerWidth > 400 ? '400px' : '100%'
+}
+
+let width = countWidth();
 
 window.addEventListener('resize', () => {
-  width = window.innerWidth > 400 ? '400px' : '100%'
-  if (aboutBox) {
-    aboutBox.width = width
-  }
-  if (contactBox) {
-    contactBox.width = width
-  }
+  width = countWidth();
 });
 
+
+
 about.addEventListener('click', () => {
-  aboutBox = new WinBox({
+  new WinBox({
     title: 'About',
+    class: [
+      'no-full',
+      'no-max'
+    ],
     width,
     height: '400px',
     top: 10,
@@ -40,8 +42,12 @@ about.addEventListener('click', () => {
 })
 
 contact.addEventListener('click', () => {
-  contactBox = new WinBox({
+  new WinBox({
     title: 'Contact Me',
+    class: [
+      'no-full',
+      'no-max'
+    ],
     width,
     height: '400px',
     top: 20,
