@@ -1,6 +1,6 @@
 # DevChallenges
 
-All of my prjucts can be found [HERE](https://ic3top.github.io/devChallenges/solutions/dist/index.html)
+All of my projects can be found [HERE](https://ic3top.github.io/devChallenges/solutions/dist/index.html)
 
 ### About this repository
 
