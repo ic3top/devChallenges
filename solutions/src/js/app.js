@@ -6,17 +6,15 @@ const contact = document.querySelector('#contact')
 const aboutContent = document.querySelector('#about-content')
 const contactContent = document.querySelector('#contact-content')
 
+let width = countWidth();
+
 function countWidth() {
   return window.innerWidth > 400 ? '400px' : '100%'
 }
 
-let width = countWidth();
-
 window.addEventListener('resize', () => {
   width = countWidth();
 });
-
-
 
 about.addEventListener('click', () => {
   new WinBox({

@@ -50,30 +50,31 @@ p {
   margin: 20px 0;
 }
 
-nav {
-  width: 30%;
-}
-
-nav ul {
+.windows {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 30%;
 }
 
-nav ul li {
+.windows li {
   color: var(--text-color);
   cursor: pointer;
 }
 
 .links {
-  margin-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.links li::before {
+  content: "🔗";
 }
 
 .container {
   max-width: 600px;
-  margin: auto;
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
